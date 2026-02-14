@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="charging">
+      <voice> 好的，那我回去充电了。 </voice>
+      <voice_en> sure, i will go back to chagre </voice_en>
+      <skill>
+         <name>charging</name>
+         <type>0</type>
+         <object>0</object>
+         <param>0</param>
+      </skill>
+   </task>
+</demo>

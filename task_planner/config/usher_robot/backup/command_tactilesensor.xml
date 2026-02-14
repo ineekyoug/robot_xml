@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="tactilesensor">
+      <voice> 我们自研的柔型超薄触觉传感器，采用高精度接触式压阻传感技术，保证其性能的稳定可靠；
+            另外我们采用了层叠式敏感单元封装集成，从而实现了传感器的小型化和轻量化；
+            在电路处理方面，我们采用低功耗触觉信息进行处理，使其功耗低至0.3瓦；
+            最终我们的传感器能在单指面内提供14点高密度敏感单元，有效
+            实现为机器人提供多维的传感信息。 </voice>
+      <voice_en>  </voice_en>
+      <!-- <skill>
+         <name>tactilesensor</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+
+</demo>
+

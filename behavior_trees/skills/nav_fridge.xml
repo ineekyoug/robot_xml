@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="NavFrige">
+  <BehaviorTree ID="NavFrige">
+    <Sequence>
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="-0.5776;-1.145;-3.14159"
+                 success="{success}"
+                 msg="{msg}"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="打开冰箱门"
+                    type="text"/>
+      <SleepAction msec="6000"/>
+      <Parallel failure_count="1"
+                success_count="2">
+        <SpeakService service_name="/speak"
+                      server_timeout="5000"
+                      speech_text="让我为您拿一份水果。"
+                      type="text"/>
+        <NavAction server_name="/base_navigate"
+                  server_timeout="60000"
+                  action_name="move"
+                  type="0"
+                  target_pose="0.3;0;0"
+                  success="{success}"
+                  msg="{msg}"/>
+      </Parallel>
+      <SleepAction msec="6000"/>
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="move"
+                 type="0"
+                 target_pose="-0.3;0;0"
+                 success="{success}"
+                 msg="{msg}"/>
+      <SleepAction msec="6000"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="关闭冰箱门"
+                    type="text"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

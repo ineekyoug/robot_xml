@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="criticalmodule">
+      <voice> 我们的一体化关节模组就像是个宝藏箱，里面藏着驱动器、减速器、力传感器这些超级厉害的小部件。这些都是我们自己研发的哦！
+而且，我们用极致的器件布局设计和结构设计，把每一个小部件都安排得整整齐齐。这样，我们就能合理利用模组里的每一个毫米空间，让机械臂变得既强大又轻便。
+你想再深入了解哪部分，让【美拉】给你再好好介绍一下！</voice>
+      <voice_en>Our integrated joint module is like a treasure chest, packed with super cool little parts like actuators, reducers, and force sensors. All of these are developed by us!
+Plus, with our ultimate component layout and structural design, we've arranged every little part neatly. This allows us to make the most of every millimeter of space in the module, making the robotic arm both powerful and lightweight.
+Which part would you like to know more about? Let [Mera] give you a more detailed introduction!  </voice_en>
+      <!-- <skill>
+         <name>criticalmodule</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+
+</demo>
+

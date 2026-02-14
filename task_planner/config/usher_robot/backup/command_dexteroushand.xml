@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<demo>
+    <task id="dexteroushand">
+      <voice> 我们自研的多触感柔型灵巧手采用仿人包握的构型设计，能自适应抓握不同的工具，提供更强抓握力；
+在手指设计上，我们的灵巧手也独具巧思，采用高抓重比的主动关节，可提供10倍的抓重，同时能实现拇指120°及四指140°大角度旋转；
+为确保作业安全，我们也在手指内增加了自适应的柔型防撞回弹，保证异常碰撞时不造成意外的损伤；
+最后，我们的手搭载了自研的柔型超薄触觉传感器，它能在单指面内提供14点高密度敏感单元，有效实现为机器人提供多维的传感信息。
+      </voice>
+      <voice_en> We've developed a multi-tactile soft and dexterous hand with a human-like gripping design that can adapt to hold different tools and provide a stronger grip.
+In terms of finger design, our dexterous hand is also uniquely thoughtful, using active joints with a high grip-to-weight ratio, offering 10 times the grip force, while also enabling the thumb to rotate 120° and the four fingers to rotate 140°.
+To ensure operational safety, we've also added adaptive soft anti-collision rebound in the fingers to prevent unexpected damage in case of abnormal collisions.
+Finally, our hand is equipped with our own soft and ultra-thin tactile sensors, which can provide 14 high-density sensitive units on a single finger surface, effectively providing multidimensional sensory information to the robot. </voice_en>
+      <!-- <skill>
+         <name>dexteroushand</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+</demo>

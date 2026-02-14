@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="reset">
+      <voice> 好的，等我涅槃重生一下 </voice>
+      <voice_en> sure, i'll reset </voice_en>
+      <skill>
+         <name>reset</name>
+         <type>0</type>
+         <object>0</object>
+         <param>0</param>
+      </skill>
+   </task>
+</demo>

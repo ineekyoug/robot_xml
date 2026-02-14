@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<demo>  
+   <task id="meeting">
+      <wait>1000</wait> 
+   </task>
+</demo>

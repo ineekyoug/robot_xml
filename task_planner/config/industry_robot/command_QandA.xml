@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<QandA>
+   <question id="injection_barrel_no_heating">
+      <voice>
+         打开加热，检查加热圈是否加热，如加热圈电压正常不加热更换加热圈。
+      </voice>
+      <voice_en>
+         Turn on the heater and check whether the heating band is functioning. If the voltage to the heating band is normal but it’s not heating, replace the heating band.
+      </voice_en>
+   </question>
+
+   <question id="injection_barrel_overheat">
+      <voice>
+         打开加热，检查固态继电器是否有220V电压输出，更换固态继电器。
+      </voice>
+      <voice_en>
+         Turn on the heater and check whether the solid-state relay is outputting 220V. If not, replace the solid-state relay.
+      </voice_en>
+   </question>
+
+   <question id="injection_mold_not_closing">
+      <voice>
+         做合模动作，如报警安全门未关或请重新开关安全门，检查安全门关闭后行程开关是否能压到，限位开关是否损坏，如损坏进行更换。
+      </voice>
+      <voice_en>
+         Perform the mold-closing action. If an alarm indicates the safety door is not closed, reopen and reclose the safety door. Check whether the limit switch is properly actuated when the door is closed, and replace it if damaged.
+      </voice_en>
+   </question>
+
+   <question id="injection_alarm_codes">
+      <voice>
+         断电，拆除制动电阻，再次上电运行。如果不再报警，说明制动回路有问题，一般是制动电阻线与机壳呈现低阻（短路），需更换制动电阻。仍然报警，则可排除制动晶体管回路问题，属于电机控制环路问题，排查其他过流故障原因。
+      </voice>
+      <voice_en>
+         Power off, remove the braking resistor, then power on and run again. If the alarm no longer appears, the issue lies in the braking circuit—typically a short circuit (low resistance) between the braking resistor wires and the machine chassis—requiring replacement of the braking resistor. If the alarm persists, the problem is not in the braking transistor circuit but in the motor control loop; investigate other overcurrent fault causes.
+      </voice_en>
+   </question>
+
+   <question id="injection_safety_module_failure">
+      <voice>
+         检查安全模块是否绿灯，如红灯需要处理报警后复位，处理会无效果更换安全模块。
+      </voice>
+      <voice_en>
+         Check if the safety module shows a green light. If it shows red, resolve the alarm and reset. If the issue persists after reset, replace the safety module.
+      </voice_en>
+   </question>
+
+   <question id="injection_slow_or_jitter">
+      <voice>
+         做合模动作，检修锁模动作液压阀电压是否正常，如电压正常拆卸清洗液压阀，清洗无效果更换电磁阀。
+      </voice>
+      <voice_en>
+         Perform the mold-closing action and check whether the voltage to the hydraulic valve for mold locking is normal. If the voltage is normal, disassemble and clean the hydraulic valve. If cleaning has no effect, replace the solenoid valve.
+      </voice_en>
+   </question>
+
+   <question id="injection_brake_timeout">
+      <voice>
+         做自动调模动作，检修抱闸位置是否正常，如位置正常拆卸抱闸或油缸，清洗抱闸无效果更换油缸。
+      </voice>
+      <voice_en>
+         Perform the automatic mold-adjustment action and inspect whether the brake position is correct. If the position is normal, disassemble the brake or cylinder, clean the brake mechanism, and if cleaning has no effect, replace the hydraulic cylinder.
+      </voice_en>
+   </question>
+
+   <question id="injection_material_storage_issue">
+      <voice>
+         做储料动作，螺杆正常转动储料不后退检查下料口是否架桥，如有料丝等杂物架桥进行清理。检查下料口是否结块，如结块对结块进行清理，疏通检查下料口温度。检查背压是否设置过大，背压设置过大进行下降设定。
+      </voice>
+      <voice_en>
+         Perform the material storage (feeding) action. If the screw rotates normally but doesn’t retract, check if bridging has occurred at the feed throat—clear any filament or debris causing the blockage. Check for material clumping at the feed throat; if present, remove the clumps and verify the feed throat temperature. Also check if the back pressure is set too high, and reduce it if necessary.
+      </voice_en>
+   </question>
+
+   <question id="injection_lubrication_failure">
+      <voice>
+         做润滑动作，添加润滑油，如有压力不起来，进行排气后使用。
+      </voice>
+      <voice_en>
+         Perform the lubrication cycle and add lubricating oil. If pressure does not build up, bleed the air from the system before use.
+      </voice_en>
+   </question>
+
+   <question id="injection_blocker_not_working">
+      <voice>
+         检查阻挡机构电磁阀是否得电，如得电检查气缸是否卡滞，如卡滞进行清理或更换气缸；如未得电检查PLC输出点及线路。
+      </voice>
+      <voice_en>
+         Check if the solenoid valve of the blocking mechanism is energized. If energized, inspect the cylinder for jamming—clean or replace it if stuck. If not energized, check the PLC output point and wiring.
+      </voice_en>
+   </question>
+
+   <question id="cooling_valve_blockage">
+      <voice>
+         原因可能是设备杂物堵塞，请维修冷却电磁阀，检查冷却水是否堵塞，对水路进行疏通。
+      </voice>
+      <voice_en>
+         The issue may be caused by debris blocking the system. Please service the cooling solenoid valve, check whether the cooling water line is clogged, and flush the water circuit.
+      </voice_en>
+   </question>
+
+   <question id="lubrication_pressure_sensor_failure">
+      <voice>
+         原因可能是线路损坏或传感器损坏。检查输入端压力检测信号，观察润滑油箱压力表是否起压，如果正常起压检查压力传感器是否正常，如损坏进行更换。如果压力传感器正常动作，短接压力传感器信号线，检查输入端是否有润滑检测信号，如没信号更换信号线。
+      </voice>
+      <voice_en>
+         The cause may be damaged wiring or a faulty sensor. Check the pressure detection signal at the input terminal and observe whether the pressure gauge on the lubricant tank builds pressure. If pressure builds normally, inspect the pressure sensor—if faulty, replace it. If the sensor operates correctly, short-circuit the sensor signal wires and check whether a lubrication detection signal appears at the input. If no signal is detected, replace the signal wiring.
+      </voice_en>
+   </question>
+
+   <question id="false_alarm">
+      <voice>
+         请检查探针是否异常，做重连或更换。
+      </voice>
+      <voice_en>
+         Check if the probe is faulty, and either reconnect or replace it.
+      </voice_en>
+   </question>
+
+   <question id="injection_crack">
+      <voice>
+         可能是因为脱模剂使用过多或模温过低，可以减少脱模剂的使用量或提高模温。
+      </voice>
+      <voice_en>
+         This may be due to excessive mold release agent or low mold temperature. Reduce the amount of release agent or increase the mold temperature.
+      </voice_en>
+   </question>
+
+   <question id="injection_delamination">
+      <voice>
+         原因是原料污染或混合不均匀。更换原料或改善混合工艺。
+      </voice>
+      <voice_en>
+         Caused by contaminated or unevenly mixed raw material. Replace the material or improve the mixing process.
+      </voice_en>
+   </question>
+
+   <question id="injection_ripple">
+      <voice>
+         应该是熔料流动不稳定、注射速度不均匀。调整工艺参数使熔料流动稳定、保持注射速度均匀。
+      </voice>
+      <voice_en>
+         Unstable melt flow or inconsistent injection speed. Adjust process parameters to stabilize melt flow and maintain uniform injection speed.
+      </voice_en>
+   </question>
+
+   <question id="wash_ratio">
+      <voice>
+         这台洗衣机的洗净比为1.28，洗净比1.28意味着为行业顶尖水平，比标准洗衣机的洗净能力高出28%以上。
+      </voice>
+      <voice_en>
+         This washing machine has a wash ratio of 1.28, which represents a top-tier industry standard—over 28% more effective than a standard washing machine.
+      </voice_en>
+   </question>
+
+   <question id="drum_material">
+      <voice>
+         洗衣机内筒的材质为不锈钢，选择不锈钢强度高，耐腐蚀、耐磨损，使用寿命长，表面光滑，不易积存污垢滋生细菌，易于清洁，可承受较高水温，适合热水洗涤程序，但制作成本较高。
+      </voice>
+      <voice_en>
+         The washing drum is made of stainless steel, chosen for its high strength, corrosion resistance, wear resistance, and long service life. Its smooth surface prevents dirt buildup and bacterial growth, making it easy to clean. It can withstand high water temperatures, ideal for hot-water wash cycles, though it comes with a higher manufacturing cost.
+      </voice_en>
+   </question>
+
+   <question id="lift_rib_design">
+      <voice>
+         核心设计为鲸翼提升筋，仿生鲸鱼尾部的空气动力学设计，产生更大提举力，将衣物托举至更高处再摔打，深层渗透瓦解污渍。更多的提升筋意味着在滚筒转动时，衣物被更频繁地抓起和摔打。这种更密集、更连续的摔打挤压动作，能更有效地让水流渗透衣物纤维，从而快速剥离顽固污渍。
+      </voice>
+      <voice_en>
+         The core design features “Whale Fin” lift ribs, inspired by the aerodynamics of a whale’s tail, generating greater lifting force to raise clothes higher before dropping them for deeper stain penetration. More lift ribs mean clothes are lifted and tumbled more frequently during drum rotation. This denser, continuous tumbling action allows water to penetrate fabric fibers more effectively, quickly removing stubborn stains.
+      </voice_en>
+   </question>
+
+   <question id="noise_reduction">
+      <voice>
+         通过投入行业首创高速内筒线，自动成型+定位传输+复合叠模+协作机器人技术，0爆筒，0刮丝，内筒噪音下降50%。
+      </voice>
+      <voice_en>
+         By deploying the industry’s first high-speed drum production line—integrating automatic forming, precise positioning transfer, composite stacking molds, and collaborative robots—the process achieves zero drum bursting and zero fabric snagging, reducing drum noise by 50%.
+      </voice_en>
+   </question>
+
+   <question id="water_energy_saving">
+      <voice>
+         通过传感器和AI算法，自动识别衣物材质、重量，并分析当地水质和气候，精准匹配水量、洗涤剂用量和时间，避免过度洗涤。电机可根据洗涤阶段自动调整转速，运行更平稳高效，相比传统定频电机更省电，噪音也更小。
+      </voice>
+      <voice_en>
+         Sensors and AI algorithms automatically identify fabric type and load weight, and analyze local water quality and climate to precisely match water volume, detergent dosage, and cycle time—avoiding over-washing. The motor automatically adjusts speed per wash phase for smoother, more efficient operation, consuming less energy and generating less noise than traditional fixed-speed motors.
+      </voice_en>
+   </question>
+
+   <question id="smart_wash_programs">
+      <voice>
+         AI智慧洗护系统：智能感知衣物重量、材质，甚至水质，自动调整水量、洗涤时间、洗涤剂用量和洗涤节奏。
+      </voice>
+      <voice_en>
+         The AI Smart Wash System intelligently senses load weight, fabric type, and even water quality, automatically adjusting water volume, wash duration, detergent dosage, and wash rhythm.
+      </voice_en>
+   </question>
+
+   <question id="hand_wash_effect">
+      <voice>
+         无孔超能内筒：传统洗衣机的内筒有孔洞，衣物在脱水时容易被吸入孔眼导致磨损或勾丝。COLMO采用无孔内筒设计，从根本上避免了衣物在洗涤过程中被钩挂或损伤的风险，为精细织物提供了更安全的洗涤环境。
+      </voice>
+      <voice_en>
+         The Seamless Ultra-Performance Drum: Traditional drums have holes, which can suck in fabrics during spin cycles, causing wear or snagging. COLMO uses a hole-free drum design that fundamentally eliminates the risk of fabric damage, offering a safer wash environment for delicate garments.
+      </voice_en>
+   </question>
+
+   <question id="detergent_utilization">
+      <voice>
+         通过高灵敏度传感器感知衣物重量、水量和水质，AI算法精准计算并自动投放适量洗涤剂和柔顺剂，从源头避免过量。采用AI控制的水流节拍，提升漂洗效率；具备一键净漂功能，AI智能感知，自动控制漂洗水量和时间，彻底去除洗涤剂残留。
+      </voice>
+      <voice_en>
+         High-sensitivity sensors detect load weight, water volume, and water quality. AI algorithms precisely calculate and automatically dispense the right amount of detergent and softener, preventing overuse at the source. AI-controlled water flow rhythms enhance rinse efficiency. The “One-Touch Pure Rinse” function uses AI to intelligently adjust rinse water volume and duration, thoroughly eliminating detergent residue.
+      </voice_en>
+   </question>
+
+   <question id="drum_self_clean">
+      <voice>
+         高温筒自洁:通过90℃以上高温空转洗涤，有效杀灭内筒的细菌和霉菌，是核心的自清洁程序。冷萃银离子除菌:在冷水洗涤过程中，银离子会持续释放并渗透衣物纤维，实现99.9%以上的高效除菌，并抑制细菌在内筒滋生。
+      </voice>
+      <voice_en>
+         High-Temperature Drum Self-Clean: An empty drum wash at over 90°C effectively kills bacteria and mold—this is the core self-cleaning program. Cold-Extract Silver Ion Sterilization: During cold washes, silver ions are continuously released and penetrate fabric fibers, achieving over 99.9% disinfection and inhibiting bacterial growth inside the drum.
+      </voice_en>
+   </question>
+
+   <question id="spin_speed">
+      <voice>
+         最高可达1600转每分钟，AI智能感知与精准控制：COLMO洗衣机的AI系统能够自动识别衣物的材质和重量。对于丝绸、羊毛等娇贵面料，系统会自动匹配更为温和的脱水转速和节奏，而非简单地一直使用最高转速，从而实现“衣干即停”，避免过度脱水。
+      </voice>
+      <voice_en>
+         Maximum spin speed reaches 1,600 RPM. With AI-powered intelligent sensing and precise control, the COLMO washing machine automatically identifies fabric type and load weight. For delicate fabrics like silk and wool, it selects gentler spin speeds and rhythms instead of always using maximum speed, achieving “stop when dry” to prevent over-spinning.
+      </voice_en>
+   </question>
+
+   <question id="fabric_care_programs">
+      <voice>
+         羊毛绿标认证程序：获得国际羊毛局最高等级的绿标认证。洗涤过程极其柔和，有大量静止浸泡时间，偶尔的摔打动作幅度也很小，方向交替，有效避免羊毛纤维因摩擦而氈化（缩水）。丝绸：利用AI神经元算法控制，产生纳米级软蒸汽穿透衣物纤维，能在不水洗的情况下祛味、除菌、除尘，并抚平褶皱，特别适合不能水洗的娇贵面料。羽绒服：洗涤时能有效防止羽绒结块。搭配烘干机的AI精算柔烘功能，通过平均42℃的低温热泵烘制和反重力膨胀技术，有效撑开纤维与褶皱，使羽绒恢复蓬松状态。
+      </voice>
+      <voice_en>
+         Wool Green Label Program: Certified with the highest “Green Label” by The Woolmark Company. The cycle is extremely gentle, featuring long soaking periods and minimal, alternating-direction tumbling to prevent wool felting (shrinkage). Silk Program: Uses AI neural algorithms to generate nano-level soft steam that penetrates fibers—deodorizing, disinfecting, and smoothing wrinkles without water, ideal for non-washable delicate fabrics. Down Jacket Program: Prevents clumping during wash. Paired with the dryer’s AI-calculated gentle drying, it uses low-temperature heat pump drying (avg. 42°C) and anti-gravity expansion technology to fluff fibers and restore loft.
+      </voice_en>
+   </question>
+
+   <question id="balance_system">
+      <voice>
+         洗衣机内置的X-Sensor智感平衡系统（或称3D智能感知平衡系统）能够准确捕捉滚筒内衣物的分布状态，即使衣物薄厚不一、分布不均，系统也能敏锐感知到可能的不平衡趋势,系统会自动进行短暂的点动或调整内筒转动，尝试通过惯性将衣物抖散、重新分布均匀，以消除不平衡因素。
+      </voice>
+      <voice_en>
+         The built-in X-Sensor Intelligent Balancing System (or 3D Smart Balance System) accurately detects the distribution of clothes inside the drum. Even with uneven or mixed-thickness loads, it senses potential imbalance trends and automatically performs brief jog movements or adjusts drum rotation to redistribute clothes evenly via inertia, eliminating vibration risks.
+      </voice_en>
+   </question>
+
+   <question id="auto_dosing">
+      <voice>
+         自动投放功能的核心在于让洗衣机像一位经验丰富的洗衣专家一样“思考”和“决策”。1、智能感知与决策：当你放入衣物启动程序后，洗衣机内置的高灵敏度重量传感器会首先感知衣物的重量。更为先进的是，其AI系统还能结合云端大数据，智能分析包括当地水质、天气状况、衣物材质等多种信息，综合计算出最佳的洗涤剂用量。2、精准执行投放：做出决策后，系统会控制高精度的活塞泵，将预先存储在料盒中的洗涤剂和柔顺剂精准地泵入内筒。这种机械结构有助于实现用量的精准控制。
+      </voice>
+      <voice_en>
+         The core of auto-dosing is enabling the washer to “think” and “decide” like an experienced laundry expert. 1) Smart Sensing and Decision-Making: After loading clothes and starting the cycle, high-sensitivity weight sensors first detect load size. More advanced, the AI system integrates cloud-based big data to analyze local water quality, weather, fabric type, and more to calculate the optimal detergent dose. 2) Precision Dosing: The system then activates high-precision piston pumps to accurately dispense pre-stored detergent and softener into the drum—a mechanical design that ensures dosing accuracy.
+      </voice_en>
+   </question>
+
+   <question id="disinfection_methods">
+      <voice>
+         冷萃银离子除菌:冷水洗涤时，内筒提升筋内的冷萃银晶体遇水释放银离子,除菌率高达99.9%。UV紫外线杀菌：烘干过程中的深度杀菌，是洗涤后二次清洁的保障。婴儿衣物、毛巾等耐高温的棉麻织物运用高温除菌。
+      </voice>
+      <voice_en>
+         Cold-Extract Silver Ion Sterilization: During cold washes, silver crystals embedded in the lift ribs release silver ions upon contact with water, achieving 99.9% disinfection. UV Sterilization: Deep germ-killing during drying provides a secondary cleaning safeguard after washing. High-temperature sterilization is used for heat-resistant cotton/linen items like baby clothes and towels.
+      </voice_en>
+   </question>
+
+   <question id="mobile_app_control">
+      <voice>
+         1.灵活安排洗衣：下班前启动洗涤，到家即可晾晒或烘干。2.精细化管理：AI超感知系统可自动感知衣物重量并匹配最佳水量、洗涤时长、水流节拍和洗涤剂投放量。您也可以通过App个性化设定洗衣、烘衣的性能参数。3.主动健康服务：App可提供如水质监测、衣物护理建议等主动服务。
+      </voice>
+      <voice_en>
+         1) Flexible Scheduling: Start washing before leaving work—arrive home ready to dry or hang. 2) Precision Management: The AI Hyper-Sensing system automatically detects load weight and optimizes water volume, cycle time, water flow rhythm, and detergent dosage. You can also personalize wash and dry settings via the app. 3) Proactive Care Services: The app offers active services like water quality monitoring and fabric care recommendations.
+      </voice_en>
+   </question>
+
+   <question id="drum_punching_process">
+      <voice>
+         运用行业首创高速内筒线，自动成型+定位传输+复合叠模+协作机器人，0爆桶，0刮丝，内筒噪音下降50%。
+      </voice>
+      <voice_en>
+         Using the industry’s first high-speed drum line—combining automatic forming, precision positioning transfer, composite stacking molds, and collaborative robots—the process achieves zero drum bursting and zero fabric snagging, reducing drum noise by 50%.
+      </voice_en>
+   </question>
+
+   <question id="drum_manufacturing_process">
+      <voice>
+         激光无缝焊接，焊缝光滑如镜，可通过“丝袜测试”，有效防止勾丝。一体冲压成型，从根源上消除了接缝，内壁浑然一体，无任何可能挂扯衣物的不平整。
+      </voice>
+      <voice_en>
+         Laser seamless welding creates mirror-smooth seams that pass the “stocking test,” effectively preventing snags. One-piece stamping eliminates seams at the source, resulting in a perfectly smooth inner drum surface with no irregularities to catch or damage fabrics.
+      </voice_en>
+   </question>
+
+   <question id="robotic_arm_tasks">
+      <voice>
+         部件抓取与放置、自动化上下料、高精度螺丝锁附、基于视觉的AI质检。
+      </voice>
+      <voice_en>
+         Robotic arms perform component picking and placement, automated loading/unloading, high-precision screw fastening, and AI-powered visual quality inspection.
+      </voice_en>
+   </question>
+
+   <question id="production_cycle_time">
+      <voice>
+         通过高度自动化与机械臂协同作业，智能物料调度系统，柔性生产模式，生产一台洗衣机最快需要10秒钟。
+      </voice>
+      <voice_en>
+         With high automation, collaborative robotic arms, intelligent material scheduling, and flexible production modes, a washing machine can be produced in as fast as 10 seconds.
+      </voice_en>
+   </question>
+
+   <question id="four_warehouses_one_chain">
+      <voice>
+         钣金四向穿梭系统、大件来料智能分拣系统、小件来料智能分拣系统、成品立库系统、空中智能积放链系统。
+      </voice>
+      <voice_en>
+         The “Four Warehouses and One Chain” includes: Sheet Metal Multi-Directional Shuttle System, Large-Part Intelligent Sorting System, Small-Part Intelligent Sorting System, Finished Goods Automated Storage System, and Overhead Intelligent Accumulation Conveyor System.
+      </voice_en>
+   </question>
+
+   <question id="cloud_logistics">
+      <voice>
+         1、订单驱动的智能排产：当生产订单下达后，“工厂大脑” 会统一进行处理。它综合考量订单需求、物料库存和产线状态，制定出最优的生产和物料配送计划，真正做到 “产品排产跟着订单走、物流配送跟着产线走”。2、自动化物料配送：计划生成后，智能AGV会根据指令，自动前往仓库货架取货，并精准配送到生产线边对应的工位，确保物料供给 “不积压、不断档”。这些AGV通过5G网络接入调度系统，运行灵活高效。3、“无断点”的线间物流：这是该工厂的一大特色。通过架设“空中连廊”（即空中悬挂链系统），将钣金、注塑、电子等零部件生产线与总装生产线直接串联起来。这使得零部件能够像“江河汇入大海”一样，通过“云物流”的方式自动、连续地汇入总装线，消除了传统工厂中零配件库存堆积和反复转运的痛点。
+      </voice>
+      <voice_en>
+         1) Order-Driven Smart Scheduling: Upon receiving a production order, the “Factory Brain” processes it holistically, considering order requirements, inventory levels, and line status to generate optimal production and material delivery plans—ensuring “production follows orders, logistics follows the line.” 2) Automated Material Delivery: Smart AGVs automatically retrieve items from warehouse shelves and deliver them precisely to designated workstations, preventing stockpiles or shortages. Connected via 5G, they operate with high flexibility and efficiency. 3) Seamless Inter-Line Logistics: A key feature of this factory. An “overhead corridor” (suspended conveyor system) directly links component lines (sheet metal, injection molding, electronics) to final assembly, enabling parts to flow continuously into assembly like “rivers into the sea,” eliminating traditional bottlenecks of inventory buildup and repeated handling.
+      </voice_en>
+   </question>
+
+   <question id="precise_parts_delivery">
+      <voice>
+         通过产线上工装板内置的RFID芯片，可以计算出每个工位零部件的消耗进度，按需送货，从而实现精准配送。
+      </voice>
+      <voice_en>
+         RFID chips embedded in the tooling plates on the assembly line track component consumption at each station, enabling just-in-time, demand-driven delivery for precise logistics.
+      </voice_en>
+   </question>
+
+   <question id="quality_inspection_stations">
+      <voice>
+         生产过程的关键质量检测工位为安规检测、过程检、外观检、成品检。
+      </voice>
+      <voice_en>
+         Key quality inspection stations include safety compliance testing, in-process inspection, visual inspection, and final product inspection.
+      </voice_en>
+   </question>
+
+   <question id="performance_tests">
+      <voice>
+         安全测试：电气强度试验、泄漏电流测试、接地电阻测试、溢水绝缘试验。核心性能测试：洗净比测试、漂洗性能（残留碱度）测试、脱水性能（含水率）测试、耗水量与耗电量测试。运行品质测试：噪声测试（洗涤/脱水）、振动性能测试。耐用性与可靠性测试：故障运行测试（如4000次循环）、门盖/按键寿命测试（如数万次开关）。包装与运输测试：包装跌落试验、模拟公路运输振动试验。
+      </voice>
+      <voice_en>
+         Safety Tests: Dielectric strength, leakage current, grounding resistance, and overflow insulation tests. Core Performance Tests: Wash ratio, rinse efficiency (residual alkalinity), spin performance (moisture content), water and energy consumption. Operational Quality Tests: Noise (wash/spin) and vibration performance. Durability and Reliability Tests: Fault-run endurance (e.g., 4,000 cycles), door/lid and button lifespan (e.g., tens of thousands of operations). Packaging and Transport Tests: Drop tests and simulated road vibration tests.
+      </voice_en>
+   </question>
+
+   <question id="5g_in_manufacturing">
+      <voice>
+         通过5G网络连接所有设备，实现数据实时传输与智能调度。利用5G+AI质检线自动进行洗衣机外观检测；实时采集分析洗衣机运行震动、噪音等数据。基于5G，智能AGV实现物料无人化配送；通过“空中连廊”将各分厂生产线无缝衔接，实现“无断点物流”。
+      </voice>
+      <voice_en>
+         All equipment is connected via 5G, enabling real-time data transmission and intelligent scheduling. 5G+AI vision inspection lines automatically perform exterior quality checks. Vibration and noise data from running machines are collected and analyzed in real time. 5G-enabled smart AGVs handle unmanned material delivery, and the “overhead corridor” seamlessly links production lines across workshops for “breakpoint-free logistics.”
+      </voice_en>
+   </question>
+
+   <question id="noise_testing">
+      <voice>
+         工厂设立睡眠级噪音室，采用双层隔音墙体，厚度大于220mm，双层真空隔音玻璃，三维六面全包裹吸音棉，确保噪音测试准确性。
+      </voice>
+      <voice_en>
+         The factory features a “sleep-grade” noise testing chamber with double-layer soundproof walls (>220mm thick), double-glazed vacuum acoustic windows, and 3D full-surround sound-absorbing foam on all six surfaces to ensure accurate noise measurement.
+      </voice_en>
+   </question>
+
+   <question id="energy_saving_measures">
+      <voice>
+         1、产品全生命周期碳管理：在产品设计阶段就考虑环保。工厂会运用数字化工具分析材料选择，比如工厂自研了含有50%再生料的洗涤剂盒部件，使其碳足迹降低了35.6%。这种从源头开始的低碳设计，对产品全生命周期的环保表现至关重要。2、AI驱动的质量管控以减少浪费：AI技术被用于提升产品质量。例如，在噪音检测环节，利用AI声纹识别替代传统人工检测，能更精准地识别问题，从而减少因质量问题导致的返工或废品，这本身也避免了能源和材料的浪费。3、智慧能源的深度优化：针对光伏发电的波动性，智能微电网系统能预测工厂的用能需求，并动态调度储能系统和电网用电，实现发、用、储之间的最佳平衡，极大提升了能源使用效率。
+      </voice>
+      <voice_en>
+         1) Full Lifecycle Carbon Management: Environmental impact is considered from the design phase. Digital tools analyze material choices—for example, the factory developed a detergent dispenser with 50% recycled content, reducing its carbon footprint by 36.5%. This upstream low-carbon design is crucial for sustainability. 2) AI-Driven Quality Control to Reduce Waste: AI improves quality—for instance, AI-based acoustic fingerprinting replaces manual noise inspection, enabling more accurate defect detection and reducing rework or scrap, thereby saving energy and materials. 3) Intelligent Energy Optimization: To manage the intermittency of solar power, a smart microgrid predicts energy demand and dynamically coordinates energy storage and grid usage, achieving optimal balance between generation, consumption, and storage—greatly enhancing energy efficiency.
+      </voice_en>
+   </question>
+
+   <question id="factory_overview">
+      <voice>
+         美的洗衣机双高端工厂占地159亩，作为集团首家双高端工厂，百年东芝的匠心传承，遇见COLMO的创新科技，双星闪耀，基因融合，缔造家电制造业的全新高度。
+      </voice>
+      <voice_en>
+         Midea’s Dual-Premium Washing Machine Factory spans 159 acres. As the group’s first dual-premium facility, it fuses Toshiba’s century-old craftsmanship with COLMO’s cutting-edge innovation—two stars shining together to redefine the future of home appliance manufacturing.
+      </voice_en>
+   </question>
+
+   <question id="native_agent_factory">
+      <voice>
+         因为洗衣机双高端工厂在设计的过程中，就融入了美的集团工厂智能体的基因，按照智能体的运行逻辑来规划、设计，所以被称为原生智能体工厂。
+      </voice>
+      <voice_en>
+         Because the Dual-Premium Washing Machine Factory was designed from the ground up with Midea Group’s “factory intelligent agent” DNA—planned and engineered according to agent-based operational logic—it is called a Native Intelligent Agent Factory.
+      </voice_en>
+   </question>
+
+   <question id="factory_intelligent_agents">
+      <voice>
+         品质智能体、生产智能体、物流智能体、运营智能体、ESG智能体、供应链智能体等。
+      </voice>
+      <voice_en>
+         Intelligent agents include: Quality Agent, Production Agent, Logistics Agent, Operations Agent, ESG Agent, Supply Chain Agent, and more.
+      </voice_en>
+   </question>
+
+   <question id="data_driven_production">
+      <voice>
+         1、智能感知与精准管控：生产线上的传感器、物联网设备实时采集设备状态、工艺参数、环境指标等数据。通过对这些数据的分析，可以实现对生产过程的精准管控，例如使生产系统变得更加动态和灵活。2、预测性维护：分析设备的振动、温度等运行数据，可以预测潜在故障，提前进行维护，大幅减少非计划停机。3、工艺参数优化：通过建模分析海量生产数据，能找到保证质量、降低能耗的最优工艺参数组合。
+      </voice>
+      <voice_en>
+         1) Smart Sensing and Precision Control: Sensors and IoT devices on the line collect real-time data on equipment status, process parameters, and environmental conditions. Analyzing this data enables precise, dynamic, and flexible production control. 2) Predictive Maintenance: Analyzing operational data like vibration and temperature allows early fault prediction and proactive maintenance, drastically reducing unplanned downtime. 3) Process Parameter Optimization: Modeling massive production datasets identifies optimal parameter combinations that ensure quality while minimizing energy consumption.
+      </voice_en>
+   </question>
+
+   <question id="agv_tasks">
+      <voice>
+         AGV小车工厂中执行原材料搬运、过程在制品的搬运、抽检零部件的搬运、成品洗衣机的搬运、模具的搬运等任务。
+      </voice>
+      <voice_en>
+         AGVs in the factory handle tasks including raw material transport, work-in-process movement, sample part delivery for inspection, finished washing machine handling, and mold transportation.
+      </voice_en>
+   </question>
+
+   <question id="automated_warehouse_management">
+      <voice>
+         通过立体仓库内置的WMS系统，可以清晰的知道每一个库位内放置何种零部件，结合WCS系统，实现上万零部件的储存、管理、配送。
+      </voice>
+      <voice_en>
+         The automated立体 warehouse uses an integrated WMS (Warehouse Management System) to track exactly which component is stored in each bin. Combined with the WCS (Warehouse Control System), it manages and delivers tens of thousands of parts efficiently.
+      </voice_en>
+   </question>
+
+   <question id="flexible_production">
+      <voice>
+         洗衣机工厂通过深度融合多项先进技术，实现了高度灵活的柔性生产，能够快速响应多样的市场需求。1、通过5G网络连接所有设备，实现数据实时传输与智能调度。2、模具自动更换时间从30分钟缩短至5分钟。3、智能AGV实现物料无人化配送；通过“空中连廊”将各分厂生产线无缝衔接，实现“无断点物流”。
+      </voice>
+      <voice_en>
+         The washing machine factory achieves highly flexible production by deeply integrating advanced technologies to rapidly respond to diverse market demands. 1) All equipment is connected via 5G for real-time data transmission and intelligent scheduling. 2) Automatic mold changeover time has been reduced from 30 minutes to just 5 minutes. 3) Smart AGVs enable unmanned material delivery, and the “overhead corridor” seamlessly links production lines across workshops for “breakpoint-free logistics.”
+      </voice_en>
+   </question>
+
+</QandA>

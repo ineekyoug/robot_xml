@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="welcome">
+      <voice> 大家好，我是【美拉】，欢迎大家来参观人形机器人的项目。</voice>
+      <voice_en> Hello everyone, I'm Mera, and welcome to our humanoid robot exhibition. </voice_en>
+      <skill>
+         <name>welcome</name>
+         <type>0</type>
+         <object>0</object>
+         <param>0</param>
+      </skill>
+   </task>
+</demo>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<demo>  
+   <task id="sensor_data_collection">
+      <skill>
+         <name>sensor_data_collection</name>
+         <type>1</type>
+         <object>image</object>
+         <param>1</param>
+      </skill>
+   </task>
+</demo>

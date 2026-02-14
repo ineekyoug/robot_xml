@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                            server_timeout="60000"
+                            torso_height="120.0"
+                            torso_yaw="120.0"
+                            head_pitch="-28.0"
+                            head_yaw="0.0"
+                            max_velocity="0.15"
+                            work_mode="0"
+                            success="{success}"
+                            msg="{msg}"/>
+            </Sequence>
+    </BehaviorTree>
+</root>

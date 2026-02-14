@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<demo>  
+   <task id="noise_sensor">
+      <skill>
+         <name>noise_sensor</name>
+         <type>0</type>
+         <object>none</object>
+         <param>1</param>
+      </skill>
+   </task>
+</demo>

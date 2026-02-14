@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="PickPlate">
+  <BehaviorTree ID="PickPlate">
+    <Sequence>
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="move"
+                 type="0"
+                 target_pose="0.2;0;0"
+                 success="{nav_success}"
+                 msg="{nav_msg}"/>
+      <IfThenElse>
+        <ManipVisonService service_name="/manip_vision_service"
+                            server_timeout="5000"
+                            object_name="fridge_middle_bar"
+                            action_param="0"
+                            camera_id="0"
+                            est_pose="{est_pose}"
+                            feedback="{manip_feedback}"/>
+        <Sequence>
+          <SleepAction msec="1"/>     
+        </Sequence>
+        <IfThenElse>
+          <RetryUntilSuccessful num_attempts="5">
+            <Sequence>
+              <NavAction server_name="/base_navigate"
+                    server_timeout="60000"
+                    action_name="turn"
+                    type="0"
+                    target_pose="0;0;0.174"
+                    success="{success}"
+                    msg="{msg}"/>
+              <ManipVisonService service_name="/manip_vision_service"
+                                  server_timeout="5000"
+                                  object_name="fridge_middle_bar"
+                                  action_param="0"
+                                  camera_id="0"
+                                  est_pose="{est_pose}"
+                                  feedback="{manip_feedback}"/>
+            </Sequence>
+          </RetryUntilSuccessful> 
+          <Sequence>
+            <SleepAction msec="1"/>     
+          </Sequence>
+          <Sequence>
+            <NavAction server_name="/base_navigate"
+                  server_timeout="60000"
+                  action_name="turn"
+                  type="0"
+                  target_pose="0;0;-0.87"
+                  success="{success}"
+                  msg="{msg}"/>
+            <RetryUntilSuccessful num_attempts="5">
+              <Sequence>
+                <NavAction server_name="/base_navigate"
+                      server_timeout="60000"
+                      action_name="turn"
+                      type="0"
+                      target_pose="0;0;-0.174"
+                      success="{success}"
+                      msg="{msg}"/>
+                <ManipVisonService service_name="/manip_vision_service"
+                                    server_timeout="5000"
+                                    object_name="fridge_middle_bar"
+                                    action_param="0"
+                                    camera_id="0"
+                                    est_pose="{est_pose}"
+                                    feedback="{manip_feedback}"/>
+              </Sequence>
+            </RetryUntilSuccessful> 
+          </Sequence>
+        </IfThenElse>
+      </IfThenElse>
+      <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="{est_pose}"
+                              source_frame="camera_torso_link"
+                              target_frame="torso_up_link"
+                              target_pose="{est_pose_up}"
+                              feedback="{trans_feedback}"/> 
+      <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="-0.025625133886933327; -0.13851462304592133; 0.443839430809021;0.26517529693971637;0.004465763555492251;0.0012281928756154858;0.9641890947273051"
+                              source_frame="camera_torso_link"
+                              target_frame="torso_up_link"
+                              target_pose="{desired_pose}"
+                              feedback="{trans_feedback}"/>
+      <ChassisAdjustAction server_name="/base_navigate"
+                          server_timeout="60000"
+                          target_pose="{est_pose_up}"
+                          desired_pose="{desired_pose}"
+                          th_move_x="0.3"
+                          th_move_y="100.0"
+                          th_turn="0" />           
+      <TorsoAction server_name="/Torso/torso_action_service"
+                   server_timeout="60000"
+                   torso_height="0.25"
+                   torso_yaw="0"
+                   head_pitch="0"
+                   head_yaw="0"
+                   max_velocity="0.15"
+                   work_mode="0"
+                   success="{success}"
+                   msg="{msg}"/>
+      <ArmAction server_name="/arm"
+                 server_timeout="30000"
+                 action_name="up"
+                 action_index="0"
+                 action_param="0"
+                 arm_index="2"
+                 goal_left="0;0;0;0;0;0;1"
+                 waypoints_left="-20;-10;-90;0;0;0;0;
+                                -27.372; -5.559; -80.559; 92.846;32.413;11.647; -2.152;
+                                -15.724; -5.161;-83.287;116.070; 32.397; 11.699; -0.425;
+                                6.659;-5.863;-80.846;116.056;32.390;11.652; -0.465;
+                                63.641;-20.538;-94.036;72.299;32.375; -32.981; -10.469
+                                
+                                "
+                 goal_right="0;0;0;0;0;0;1"
+                 waypoints_right="-20;-10;-90;0;0;0;0;
+                                -27.372; -5.559; -80.559; 92.846;32.413;11.647; -2.152;
+                                -15.724; -5.161;-83.287;116.070; 32.397; 11.699; -0.425;
+                                6.659;-5.863;-80.846;116.056;32.390;11.652; -0.465;
+                                63.641;-20.538;-94.036;72.299;32.375; -32.981; -10.469
+                                "
+                 speed_percentage="40"
+                 msg="{arm_msg}"
+                 pose="{arm_pose}"/>
+      <NavAction server_name="/base_navigate"
+                  server_timeout="60000"
+                  action_name="move"
+                  type="0"
+                  target_pose="0.10;0;0"
+                  success="{success}"
+                  msg="{msg}"/>
+      <ArmAction server_name="/arm"
+                 server_timeout="30000"
+                 action_name="up"
+                 action_index="0"
+                 action_param="0"
+                 arm_index="2"
+                 goal_left="0;0;0;0;0;0;1"
+                 waypoints_left=
+                              "74.795;-19.577;-92.176;52.136;12.476; -25.784; -15.360;
+                                74.222;-9.232;-92.171;52.137;12.477;-25.784; -15.360;
+                                 77.222;-10.232;-92.171;52.137;-3.477; -30.784; -20.360"
+                 goal_right="0;0;0;0;0;0;1"
+                 waypoints_right="74.795;-19.577;-92.176;52.136;12.476; -25.784; -15.360;
+                                74.222;-9.232;-92.171;52.137;12.477;-25.784; -15.360;
+                                 77.222;-10.232;-92.171;52.137;-3.477; -30.784; -20.360"
+                 speed_percentage="10"
+                 msg="{arm_msg}"
+                 pose="{arm_pose}"/>
+      <HandAction server_name="/avaia_hand"
+                  server_timeout="2000"
+                  action_name="pick_plate_both"
+                  success="{hand_success}"
+                  status="{hand_status}"/>
+      <NavAction server_name="/base_navigate"
+                  server_timeout="60000"
+                  action_name="move"
+                  type="0"
+                  target_pose="-1.0;0;0"
+                  success="{success}"
+                  msg="{msg}"/>
+       <SystemCallService command="aplay ~/waic_wmv/11.wav"/>
+         <!--等待关好门-->
+      <SleepAction msec="5000"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

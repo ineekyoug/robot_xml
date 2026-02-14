@@ -1,0 +1,3 @@
+source;share/task_planner/environment/ament_prefix_path.sh
+source;share/task_planner/environment/path.sh
+source;share/task_planner/environment/pythonpath.sh

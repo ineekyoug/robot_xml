@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<demo>  
+   <task id="place">
+      <skill>
+         <name>Introduce_hi_bye</name>
+         <type>0</type>
+         <object>1-40</object>
+         <param>1</param>
+      </skill>
+   </task>
+</demo>

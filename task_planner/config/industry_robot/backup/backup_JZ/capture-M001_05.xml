@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<demo>  
+   <task id="take_photo">
+   <!-- arm skill, using skill name to call the arm action in skill_list -->
+      <skill>
+         <name>Coupling_capture_M001_05</name>
+         <type>0</type>
+         <object>0</object>
+         <param>1</param>
+      </skill>
+   </task>  
+   <task id="sensor_data_collection">
+      <skill>
+         <name>sensor_data_collection</name>
+         <type>1</type>
+         <object>image</object>
+         <param>1</param>
+      </skill>
+   </task>
+   <task id="take_photo">
+   <!-- arm skill, using skill name to call the arm action in skill_list -->
+      <skill>
+         <name>Standby_torso</name>
+         <type>0</type>
+         <object>0</object>
+         <param>1</param>
+      </skill>
+   </task>
+</demo>

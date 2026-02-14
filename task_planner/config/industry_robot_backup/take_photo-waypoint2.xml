@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<demo>  
+   <task id="take_photo">
+      <skill>
+         <name>take_photo</name>
+         <type>0</type>
+         <object>waypoint2</object>
+         <param>1</param>
+      </skill>
+   </task>
+   <task id="sensor_data_collection">
+      <skill>
+         <name>sensor_data_collection</name>
+         <type>0</type>
+         <object>multi_image</object>
+         <param>2</param>
+      </skill>
+   </task>
+</demo>

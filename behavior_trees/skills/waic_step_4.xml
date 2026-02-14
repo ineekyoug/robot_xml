@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="WAICSTEP4">
+  <include path="./operate_fridge.xml"/>
+  <include path="./operate_coffee.xml"/>
+  <include path="./big_heart.xml"/>
+  <include path="./introduction.xml"/>
+  <include path="./reset.xml"/>
+  <BehaviorTree ID="WAICSTEP4">
+    <Sequence>
+      <!--洗衣机-->
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="2.422261;3.370625;3.0763997"
+                 success="{success}"
+                 msg="{msg}"/>
+      <Parallel failure_count="1"
+                success_count="2">   
+        <!-- "这款图灵小蛮腰搭载了AI轻干洗和AI零感交互，轻松洗护的同时还能定制化护理不同材质的珍贵面料" -->
+        <SystemCallService command="aplay ~/waic_wmv/7.wav &"/>
+        <SubTree ID="Introduction" node="{node}"
+                                          bt_loop_duration="{bt_loop_duration}"
+                                          wait_for_service_timeout="{wait_for_service_timeout}" />                             
+      </Parallel>
+      <!-- <SleepAction msec="2500"/>  -->
+      <SubTree ID="Reset" node="{node}"
+                                bt_loop_duration="{bt_loop_duration}"
+                                wait_for_service_timeout="{wait_for_service_timeout}" />   
+     
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="turn"
+                 type="0"
+                 target_pose="0;0;3.14"
+                 success="{success}"
+                 msg="{msg}"/>
+      <!-- "嗨！colmo，打开AI智烘模式" -->
+      <SystemCallService command="aplay ~/waic_wmv/8.wav"/>
+      <SleepAction msec="2500"/>
+      <!--冰箱-->
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="turn"
+                 type="0"
+                 target_pose="0;0;-1.57"
+                 success="{success}"
+                 msg="{msg}"/>
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="move"
+                 type="0"
+                 target_pose="0.2;0;0"
+                 success="{success}"
+                 msg="{msg}"/>
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="turn"
+                 type="0"
+                 target_pose="0;0;-1.57"
+                 success="{success}"
+                 msg="{msg}"/>
+      <Parallel failure_count="1"
+                success_count="2"> 
+        <!-- "这是图灵AI营养冰箱，搭载了自研的AI营养技术" -->
+        <SystemCallService command="aplay ~/waic_wmv/9.wav &"/>
+        <SubTree ID="Introduction" node="{node}"
+                                        bt_loop_duration="{bt_loop_duration}"
+                                        wait_for_service_timeout="{wait_for_service_timeout}" />
+      </Parallel>
+      <SleepAction msec="2500"/>
+      <SubTree ID="Reset" node="{node}"
+                                      bt_loop_duration="{bt_loop_duration}"
+                                      wait_for_service_timeout="{wait_for_service_timeout}" /> 
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="turn"
+                 type="0"
+                 target_pose="0;0;1.57"
+                 success="{success}"
+                 msg="{msg}"/>
+      <SubTree ID="OperateFridge" node="{node}"
+                                  bt_loop_duration="{bt_loop_duration}"
+                                  wait_for_service_timeout="{wait_for_service_timeout}" />
+      <!--烟灶-->
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="2.64671;1.061608;2.7091697"
+                 success="{success}"
+                 msg="{msg}"/>
+      <!-- <SleepAction msec="1500"/> -->
+      <Parallel failure_count="1"
+                success_count="2"> 
+        <SystemCallService command="aplay ~/waic_wmv/12.wav &"/>
+        <SubTree ID="Introduction" node="{node}"
+                                        bt_loop_duration="{bt_loop_duration}"
+                                        wait_for_service_timeout="{wait_for_service_timeout}" />
+      </Parallel>
+      <SleepAction msec="2500"/> 
+      <SubTree ID="Reset" node="{node}"
+                                bt_loop_duration="{bt_loop_duration}"
+                                wait_for_service_timeout="{wait_for_service_timeout}" /> 
+      <!-- <SleepAction msec="2500"/> -->
+        <!--微蒸烤-->
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="2.786600960769565;0.5533690962752981;2.7696109"
+                 success="{success}"
+                 msg="{msg}"/>
+      <!-- <SleepAction msec="1500"/> -->
+      <Parallel failure_count="1"
+                success_count="2"> 
+        <SystemCallService command="aplay ~/waic_wmv/15.wav &"/>
+        <SubTree ID="Introduction" node="{node}"
+                                        bt_loop_duration="{bt_loop_duration}"
+                                        wait_for_service_timeout="{wait_for_service_timeout}" />
+      </Parallel>
+      <SleepAction msec="2500"/>
+      <SubTree ID="Reset" node="{node}"
+                                      bt_loop_duration="{bt_loop_duration}"
+                                      wait_for_service_timeout="{wait_for_service_timeout}" /> 
+      <!-- <SleepAction msec="2500"/> -->
+      <!--咖啡机-->
+      <SubTree ID="OperateCoffee" node="{node}"
+                                  bt_loop_duration="{bt_loop_duration}"
+                                  wait_for_service_timeout="{wait_for_service_timeout}" />
+      <Parallel failure_count="1"
+                success_count="2">
+        <SystemCallService command="aplay ~/waic_wmv/14.wav &"/> 
+        <!--大比心-->
+        <SubTree ID="BigHeart" node="{node}"
+                                    bt_loop_duration="{bt_loop_duration}"
+                                    wait_for_service_timeout="{wait_for_service_timeout}" />
+      </Parallel>
+      <SleepAction msec="2500"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

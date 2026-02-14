@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="OpenWasherDoor">
+  <BehaviorTree ID="OpenWasherDoor">
+    <Sequence>
+      <!-- <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="-0.8089;-2.414;-2.526"
+                 success="{success}"
+                 msg="{msg}"/> -->
+      <TorsoAction server_name="/Torso/torso_action_service"
+                   server_timeout="60000"
+                   torso_height="0.17"
+                   torso_yaw="0"
+                   head_pitch="0"
+                   head_yaw="-20"
+                   max_velocity="0.15"
+                   work_mode="0"
+                   success="{success}"
+                   msg="{msg}"/>
+      <Fallback>
+        <ManipVisonService service_name="/manip_vision_service"
+                            server_timeout="5000"
+                            object_name="washing_machine_panel"
+                            action_param="0"
+                            camera_id="0"
+                            est_pose="{est_pose}"
+                            feedback="{manip_feedback}"/>
+        <RetryUntilSuccessful num_attempts="5">
+          <Sequence>
+            <NavAction server_name="/base_navigate"
+                  server_timeout="60000"
+                  action_name="turn"
+                  type="0"
+                  target_pose="0;0;0.174"
+                  success="{success}"
+                  msg="{msg}"/>
+            <ManipVisonService service_name="/manip_vision_service"
+                                server_timeout="5000"
+                                object_name="washing_machine_panel"
+                                action_param="0"
+                                camera_id="0"
+                                est_pose="{est_pose}"
+                                feedback="{manip_feedback}"/>
+          </Sequence>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <NavAction server_name="/base_navigate"
+                server_timeout="60000"
+                action_name="turn"
+                type="0"
+                target_pose="0;0;-0.87"
+                success="{success}"
+                msg="{msg}"/>
+          <RetryUntilSuccessful num_attempts="5">
+            <Sequence>
+              <NavAction server_name="/base_navigate"
+                    server_timeout="60000"
+                    action_name="turn"
+                    type="0"
+                    target_pose="0;0;-0.174"
+                    success="{success}"
+                    msg="{msg}"/>
+              <ManipVisonService service_name="/manip_vision_service"
+                                  server_timeout="5000"
+                                  object_name="washing_machine_panel"
+                                  action_param="0"
+                                  camera_id="0"
+                                  est_pose="{est_pose}"
+                                  feedback="{manip_feedback}"/>
+            </Sequence>
+          </RetryUntilSuccessful> 
+        </Sequence>
+      </Fallback>
+      <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="{est_pose}"
+                              source_frame="camera_head_link"
+                              target_frame="torso_up_link"
+                              target_pose="{est_pose_up}"
+                              feedback="{tf_trans_feedback}"/>
+      <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="0.05483231693506241;-0.15643911063671112;0.4480000138282776;0.010808730030701033;0.08494495252138479;0.0009215322234639348;0.996326591622759"
+                              source_frame="camera_head_link"
+                              target_frame="torso_up_link"
+                              target_pose="{desired_pose}"
+                              feedback="{tf_trans_feedback}"/>
+      <ChassisAdjustAction server_name="/base_navigate"
+                          server_timeout="60000"
+                          target_pose="{est_pose_up}"
+                          desired_pose="{desired_pose}"
+                          th_move="0.1" /> 
+      <SleepAction msec="2000"/>
+      <!-- <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="嗨！！！科慕"
+                    type="text"/>
+      <SleepAction msec="3000"/>              
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="打开肝衣机门"
+                    type="text"/>
+      <SleepAction msec="10000"/>  -->
+    </Sequence>
+  </BehaviorTree>
+</root>

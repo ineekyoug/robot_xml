@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="HalogenDetVLAModelCall3">
+  <BehaviorTree ID="HalogenDetVLAModelCall3">
+    <Sequence>
+        <TorsoAction server_name="/Torso/torso_action_service"
+                                server_timeout="5000"
+                                torso_height="55"
+                                torso_yaw="55"
+                                head_pitch="0"
+                                head_yaw="0"
+                                max_velocity="0.3"
+                                work_mode="0"
+                                success="{torsor_success}"
+                                msg="{torsor_msg}"/>
+        
+    </Sequence>
+  </BehaviorTree>
+</root>
+
+
+
+

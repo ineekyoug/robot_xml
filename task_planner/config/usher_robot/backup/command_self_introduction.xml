@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="self-introduction">
+      <voice> 我是一个展会迎宾机器人,我的名字是美啦，主要功能是与客户交互 </voice>
+      <voice_en>  </voice_en>
+   </task>
+
+</demo>
+

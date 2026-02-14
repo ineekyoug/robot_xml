@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<demo>
+    <task id="3Dcamera">
+      <voice_en> Our 3D vision camera uses our own low-cost, high-reliability flexible MOEMS optoelectronic scanning technology. 
+      This technology is like equipping the robot's eyes with super flexible eyeballs, 
+      which can increase the speckle quantity in binocular vision by more than 5 times without increasing the total optical power, 
+      while ensuring human eye safety. This significantly improves the detection accuracy of the binocular vision system by more than double.
+      Moreover, our camera has also broken through the technical bottlenecks of traditional binocular vision in fine tasks, offering a cost-effective solution. This means our robots can see more clearly and accurately in various scenarios, 
+      whether it's bright daylight or dim nighttime, and accomplish more delicate tasks
+      </voice_en>
+      <voice> 我们的3D视觉相机使用了自主研发的低成本、高可靠的柔性MOEMS光电扫描技术。这个技术就像是给机器人的眼睛装上了超级灵活的眼球，能够在保证人眼安全的同时，不增加总光功率，让双目视觉中的散斑数量提高5倍以上，这样就能大幅提高双目视觉系统的检测精度两倍以上。
+               而且，我们的相机还突破了传统双目视觉在精细任务中的技术瓶颈，提供了一个性价比极高的解决方案。这意味着我们的机器人能够在各种使用场景中，
+               无论是在明亮的白天还是在昏暗的夜晚，都能看得更清楚、更准确，完成更多精细的任务
+      </voice>
+      <!-- <skill>
+         <name>3Dcamera</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+</demo>

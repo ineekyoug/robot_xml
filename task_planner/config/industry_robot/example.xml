@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<demo>  
+<!-- file name is composed by actionType-locationId -->
+   <!-- <task id="capture"> -->
+   <!-- arm skill, using skill name to call the arm action in skill_list -->
+      <!-- <skill>
+         <name>capture</name>
+         <type>0</type>
+         <object>1-20</object>
+         <param>1</param>
+      </skill>
+   </task> -->
+   <!-- skill name "sensor_data_collection" is fixed, DO NOT CHANGE, using object and param to indicate the task and count-->
+      <!-- object:  image/multi_image/noise_detect -->
+      <!-- param: detect or capture count: (0-100) -->
+      <!-- type:  camera id:  0/1 -->
+   <task id="sensor_data_collection">
+      <skill>
+         <name>sensor_data_collection</name>
+         <type>1</type>
+         <object>image</object>
+         <param>1</param>
+      </skill>
+   </task>
+</demo>

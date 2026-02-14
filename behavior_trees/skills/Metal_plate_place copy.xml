@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                              server_timeout="60000"
+                              torso_height="0.0"
+                              torso_yaw="-5.0"
+                              head_pitch="-28.6"
+                              head_yaw="2"
+                              max_velocity="0.15"
+                              work_mode="0"
+                              success="{success}"
+                              msg="{msg}"/>
+                <ArmAction server_name="/arm"
+                          server_timeout="30000"
+                          action_name="reset"
+                          action_index="0"
+                          action_param="0"
+                          arm_index="1"
+                          goal_left="0;0;0;0;0;0;1"
+                          waypoints_left=""
+                          goal_right="0;0;0;0;0;0;1"
+                          waypoints_right=" 1.640; -29.435; 4.165; 12.198; -76.776; -13.368; 10.280;
+                                            -0.101; -23.681; 42.630; 19.316; -107.858; 9.972; -1.929;
+                                            22.185; -47.475; 48.986; 48.302; -106.358; -0.197; 3.936;
+                                            55.699; -117.867; 50.199; 85.142; -96.047; -34.054; -3.679;
+                                            160.702; -55.691; 146.862; 110.458; -96.974; -34.630; 13.048; 
+                                            160.702; -64.523; 119.400; 109.009; -73.884; -34.481; 13.864;
+                                            115.729; -40.125; 74.397; 61.845; -73.282; -20.841, 24.999;
+                                            92.009; -31.414; 68.642; 40.476; -76.227; -18.325; 15.904;
+                                            84.037; -27.500; 66.743; 23.014; -76.552; -24.553; 25.445
+                                            "
+                          speed_percentage="15"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                          msg="{arm_msg}"
+                          pose="{arm_pose}"/>
+
+                <!-- 107.176; -14.172; 66.243; 59.769; -90.794; -30.596; -2.924 -->
+                <!-- <Parallel failure_count="1"
+                          success_count="2">
+                 <ArmAction server_name="/arm"
+                          server_timeout="30000"
+                          action_name="reset"
+                          action_index="0"
+                          action_param="0"
+                          arm_index="1"
+                          goal_left="0;0;0;0;0;0;1"
+                          waypoints_left=""
+                          goal_right="0;0;0;0;0;0;1"
+                          waypoints_right="105.325; -13.596; 66.259; 57.933; -90.624; -30.387; -2.917"
+                          speed_percentage="20"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                          msg="{arm_msg}"
+                          pose="{arm_pose}"/>
+                 <HandAction server_name="/avaia_hand"
+                            server_timeout="2000"
+                            action_name="release_grasp_metal_right"
+                            success="{hand_success}"
+                            status="{hand_status}"/>
+                </Parallel>
+                 -->
+                
+                
+                <ArmAction server_name="/arm"
+                           server_timeout="30000"
+                           action_name="reset"
+                           action_index="0"
+                           action_param="0"
+                           arm_index="1"
+                           goal_left="0;0;0;0;0;0;1"    
+                           waypoints_left=""
+                           goal_right="0;0;0;0;0;0;1"
+                           waypoints_right="115.729; -40.125; 74.397; 61.845; -73.282; -20.841; 24.999;
+                                             160.702; -64.523; 119.400; 109.009; -73.884; -34.481; 13.864;
+                                             160.702; -55.691; 146.862; 110.458; -96.974; -34.630; 13.048; 
+                                             160.699; -117.866; 150.201; 75.142; -96.047; -34.053; -3.680; 
+                                             55.699; -117.867; 50.199; 85.142; -96.047; -34.054; -3.679;
+                                             22.185; -47.475; 48.986; 48.302; -106.358; -0.197; 3.936;
+                                             -0.101; -23.681; 42.630; 19.316; -107.858; 9.972; -1.929;
+                                             1.640; -29.435; 4.165; 12.198; -76.776; -13.368; 10.280;
+                                             5;-10;0;0;0;0;0; 
+                                             0;-5;0;0;0;0;0"                   
+                           speed_percentage="15"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                           msg="{arm_msg}"
+                           pose="{arm_pose}"/>
+                
+                <!-- 41.385; -89.421; 50.218; 91.928; -116.431; -4.606; 2.400;
+                 41.385; -89.421; 50.218; 91.928; -116.431; -4.606; 2.400; -->
+                
+                <!-- <TorsoAction server_name="/Torso/torso_action_service"
+                              server_timeout="60000"
+                              torso_height="35.0"
+                              torso_yaw="35.0"
+                              head_pitch="0.0"
+                              head_yaw="2"
+                              max_velocity="0.15"
+                              work_mode="0"
+                              success="{success}"
+                              msg="{msg}"/>  
+                <HandAction server_name="/avaia_hand"
+                            server_timeout="2000"
+                            action_name="reset_right"
+                            success="{hand_success}"
+                            status="{hand_status}"/>       -->
+
+            <!-- waypoints_right=" 1.640; -29.435; 4.165; 12.198; -76.776; -13.368; 10.280;
+                                            -0.101; -23.681; 42.630; 19.316; -107.858; 9.972; -1.929;
+                                            22.185; -47.475; 48.986; 48.302; -106.358; -0.197; 3.936;
+                                            
+                                            55.699; -117.867; 50.199; 85.142; -96.047; -34.054; -3.679;
+                                            160.699; -117.866; 150.201; 75.142; -96.047; -34.053; -3.680; 
+                                            160.702; -55.691; 146.862; 110.458; -96.974; -34.630; 13.048; 
+                                            160.702; -64.523; 119.400; 109.009; -73.884; -34.481; 13.864;
+                                            115.729; -40.125; 74.397; 61.845; -73.282; -20.841, 24.999;
+                                            92.009, -31.414, 68.642, 40.476, -76.227, -18.325, 15.904
+                                            84.037, -27.500, 66.743, 23.014, -76.552, -24.553, 25.445
+                                            " -->
+
+
+                    
+            </Sequence>
+    </BehaviorTree>
+</root>

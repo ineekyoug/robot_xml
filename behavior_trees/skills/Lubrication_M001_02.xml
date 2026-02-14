@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                            server_timeout="60000"
+                            torso_height="50.3"
+                            torso_yaw="30.1"
+                            head_pitch="-28.6"
+                            head_yaw="0"
+                            max_velocity="0.15"
+                            work_mode="0"
+                            success="{success}"
+                            msg="{msg}"/>
+                <ArmAction server_name="/arm"
+                          server_timeout="30000"
+                          action_name="reset"
+                          action_index="0"
+                          action_param="0"
+                          arm_index="1"
+                          goal_left="0;0;0;0;0;0;1"
+                          waypoints_left=""
+                          goal_right="0;0;0;0;0;0;1"
+                          waypoints_right="-1.2404; -8.0484; -4.7730; 2.8868; 9.5097; 17.1010; -19.2435;
+                    24.274; -24.322; -5.224; 10.884; -5.177; -6.288; -18.082;
+                    71.733; -39.373; 53.710; 39.946; -27.124; 7.628; -20.666;
+                    99.860; -27.816; 53.455; 41.370; -31.164; 12.581; -13.681;
+                    84.836; -10.968; 56.216; 38.216; 38.973; -61.082; -41.329;
+                    75.973; -7.001; 54.412; 23.803; 38.590; -51.242; -42.188;
+                    84.836; -10.968; 56.216; 38.216; 38.973; -61.082; -41.329;
+                    99.860; -27.816; 53.455; 41.370; -31.164; 12.581; -13.681;
+                    71.733; -39.373; 53.710; 39.946; -27.124; 7.628; -20.666;
+                    24.274; -24.322; -5.224; 10.884; -5.177; -6.288; -18.082;
+                    -1.2404; -8.0484; -4.7730; 2.8868; 9.5097; 17.1010; -19.2435;
+                    0; 0; 0; 0; 0; 0; 0"
+                          speed_percentage="40"
+                          force_thres_left=""
+                          ik_initial_joint_left=""
+                          force_thres_right=""
+                          ik_initial_joint_right=""
+                          disable_self_or_obstacle_avoidance_planning="true"
+                          enable_replan="false"
+                          disable_force_collision_detection="true"
+                          disable_self_or_obstacle_collision_detection="true"
+                          msg="{arm_msg}"
+                          pose="{arm_pose}"/>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                            server_timeout="60000"
+                            torso_height="35.0"
+                            torso_yaw="35.0"
+                            head_pitch="0"
+                            head_yaw="0"
+                            max_velocity="0.15"
+                            work_mode="0"
+                            success="{success}"
+                            msg="{msg}"/>
+            </Sequence>
+    </BehaviorTree>
+</root>

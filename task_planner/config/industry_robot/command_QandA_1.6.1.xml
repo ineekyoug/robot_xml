@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<QandA>
+   <question id="injection_barrel_no_heating">
+      <voice>
+         打开加热，检查加热圈是否加热，如加热圈电压正常不加热更换加热圈。
+      </voice>
+      <voice_en>
+         Turn on the heater and check whether the heating band is functioning. If the voltage to the heating band is normal but it’s not heating, replace the heating band.
+      </voice_en>
+   </question>
+
+   <question id="injection_barrel_overheat">
+      <voice>
+         打开加热，检查固态继电器是否有220V电压输出，更换固态继电器。
+      </voice>
+      <voice_en>
+         Turn on the heater and check whether the solid-state relay is outputting 220V. If not, replace the solid-state relay.
+      </voice_en>
+   </question>
+
+   <question id="injection_mold_not_closing">
+      <voice>
+         做合模动作，如报警安全门未关或请重新开关安全门，检查安全门关闭后行程开关是否能压到，限位开关是否损坏，如损坏进行更换。
+      </voice>
+      <voice_en>
+         Perform the mold-closing action. If an alarm indicates the safety door is not closed, reopen and reclose the safety door. Check whether the limit switch is properly actuated when the door is closed, and replace it if damaged.
+      </voice_en>
+   </question>
+
+   <question id="injection_alarm_codes">
+      <voice>
+         断电，拆除制动电阻，再次上电运行。如果不再报警，说明制动回路有问题，一般是制动电阻线与机壳呈现低阻（短路），需更换制动电阻。仍然报警，则可排除制动晶体管回路问题，属于电机控制环路问题，排查其他过流故障原因。
+      </voice>
+      <voice_en>
+         Power off, remove the braking resistor, then power on and run again. If the alarm no longer appears, the issue lies in the braking circuit—typically a short circuit (low resistance) between the braking resistor wires and the machine chassis—requiring replacement of the braking resistor. If the alarm persists, the problem is not in the braking transistor circuit but in the motor control loop; investigate other overcurrent fault causes.
+      </voice_en>
+   </question>
+
+   <question id="injection_safety_module_failure">
+      <voice>
+         检查安全模块是否绿灯，如红灯需要处理报警后复位，处理会无效果更换安全模块。
+      </voice>
+      <voice_en>
+         Check if the safety module shows a green light. If it shows red, resolve the alarm and reset. If the issue persists after reset, replace the safety module.
+      </voice_en>
+   </question>
+
+   <question id="injection_slow_or_jitter">
+      <voice>
+         做合模动作，检修锁模动作液压阀电压是否正常，如电压正常拆卸清洗液压阀，清洗无效果更换电磁阀。
+      </voice>
+      <voice_en>
+         Perform the mold-closing action and check whether the voltage to the hydraulic valve for mold locking is normal. If the voltage is normal, disassemble and clean the hydraulic valve. If cleaning has no effect, replace the solenoid valve.
+      </voice_en>
+   </question>
+
+   <question id="injection_brake_timeout">
+      <voice>
+         做自动调模动作，检修抱闸位置是否正常，如位置正常拆卸抱闸或油缸，清洗抱闸无效果更换油缸。
+      </voice>
+      <voice_en>
+         Perform the automatic mold-adjustment action and inspect whether the brake position is correct. If the position is normal, disassemble the brake or cylinder, clean the brake mechanism, and if cleaning has no effect, replace the hydraulic cylinder.
+      </voice_en>
+   </question>
+
+   <question id="injection_material_storage_issue">
+      <voice>
+         做储料动作，螺杆正常转动储料不后退检查下料口是否架桥，如有料丝等杂物架桥进行清理。检查下料口是否结块，如结块对结块进行清理，疏通检查下料口温度。检查背压是否设置过大，背压设置过大进行下降设定。
+      </voice>
+      <voice_en>
+         Perform the material storage (feeding) action. If the screw rotates normally but doesn’t retract, check if bridging has occurred at the feed throat—clear any filament or debris causing the blockage. Check for material clumping at the feed throat; if present, remove the clumps and verify the feed throat temperature. Also check if the back pressure is set too high, and reduce it if necessary.
+      </voice_en>
+   </question>
+
+   <question id="injection_lubrication_failure">
+      <voice>
+         做润滑动作，添加润滑油，如有压力不起来，进行排气后使用。
+      </voice>
+      <voice_en>
+         Perform the lubrication cycle and add lubricating oil. If pressure does not build up, bleed the air from the system before use.
+      </voice_en>
+   </question>
+
+   <question id="injection_blocker_not_working">
+      <voice>
+         检查阻挡机构电磁阀是否得电，如得电检查气缸是否卡滞，如卡滞进行清理或更换气缸；如未得电检查PLC输出点及线路。
+      </voice>
+      <voice_en>
+         Check if the solenoid valve of the blocking mechanism is energized. If energized, inspect the cylinder for jamming—clean or replace it if stuck. If not energized, check the PLC output point and wiring.
+      </voice_en>
+   </question>
+</QandA>

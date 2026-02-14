@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="OperateCoffee">
+  <include path="./skills/nav_coffee.xml"/>
+  <include path="./skills/grasp_cup.xml"/>
+  <include path="./skills/release_cup.xml"/>
+  <BehaviorTree ID="OperateCoffee">
+    <Sequence>
+      <SubTree ID="NavCoffee" node="{node}"
+                              bt_loop_duration="{bt_loop_duration}"
+                              wait_for_service_timeout="{wait_for_service_timeout}" />
+      <SubTree ID="GraspCup" node="{node}"
+                              bt_loop_duration="{bt_loop_duration}"
+                              wait_for_service_timeout="{wait_for_service_timeout}" />
+      <SubTree ID="ReleaseCup" node="{node}"
+                              bt_loop_duration="{bt_loop_duration}"
+                              wait_for_service_timeout="{wait_for_service_timeout}" />
+    </Sequence>
+  </BehaviorTree>
+</root>

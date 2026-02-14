@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="Introduction">
+  <BehaviorTree ID="Introduction">
+    <Sequence>
+        <ArmAction server_name="/arm"
+                  server_timeout="30000"
+                  action_name="up"
+                  action_index="0"
+                  action_param="0"
+                  arm_index="2"
+                  goal_left="0;0;0;0;0;0;1"
+                  waypoints_left="0.0; -30.0; -30; 0.0; 0.0; 0.0; 0.0;
+                                  7.3503 ;-48.3124; -45.9222; 96.6118; 69.2758; 43.6732; 25.0076"
+                  goal_right="0;0;0;0;0;0;1"
+                  waypoints_right="0.0; -30.0; -30; 0.0; 0.0; 0.0; 0.0;
+                                   7.3503 ;-48.3124; -45.9222; 96.6118; 69.2758; 43.6732; 25.0076
+                                  "
+                  speed_percentage="50"
+                  msg="{arm_msg}"
+                  pose="{arm_pose}"/>       
+      <SleepAction msec="3000"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

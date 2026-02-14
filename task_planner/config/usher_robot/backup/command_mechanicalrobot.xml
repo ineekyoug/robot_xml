@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<demo>
+    <task id="mechanicalrobot">
+      <voice> 我们自研了两款机械臂，一款是高负重比的工业机械臂，另一款是超轻力感的家用机械臂，请问你想了解哪一款？ </voice>
+   <voice_en>  </voice_en>
+      <!-- <skill>
+         <name>mechanicalrobot</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+</demo>

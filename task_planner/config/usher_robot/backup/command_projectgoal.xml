@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="projectgoal">
+      <voice>我们的项目其实是希望发挥美地在硬件研发上深耕累积的技术优势，还有强大的制造能力优势，帮助美地风口的机会，转型高科技企业！ </voice>
+      <voice_en> Our project aims to leverage Midea's deep-rooted technical advantages in hardware development 
+      and its strong manufacturing capabilities to seize the opportunity and transition into a high-tech enterprise!  </voice_en>
+      <!-- <skill>
+         <name>projectobjective</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+</demo>

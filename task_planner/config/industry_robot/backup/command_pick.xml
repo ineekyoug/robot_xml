@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="pick">
+      <voice> 好的，我去取螺丝了</voice>
+      <voice_en> Now， I will pick up the screw</voice_en>
+      <skill>
+         <name>pick</name>
+         <type>0</type>
+         <object>screw</object>
+         <param>0</param>
+      </skill>
+      <wait>1000</wait> 
+   </task>
+</demo>

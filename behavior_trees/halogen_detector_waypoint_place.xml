@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="HalogenDetVLAModelCall3">
+  <BehaviorTree ID="HalogenDetVLAModelCall3">
+    <Sequence>
+
+         <ArmAction server_name="/arm"
+                                server_timeout="30000"
+                                action_name="reset"
+                                action_index="0"
+                                action_param="0"
+                                arm_index="1"
+                                goal_left="0;0;0;0;0;0;1"
+                                goal_right="0;0;0;0;0;0;1"
+                                waypoints_left=""
+                                waypoints_right="34.9991781404703; -36.24590883160582; -91.93723773012067; 108.819580078125; 82.49894850324877; 6.566397789681312; 31.29368545985458;
+                                37.04513700881807; 4.252524800819926; -95.11718145691522; 101.79240916034964; 101.2236219349474; -13.168637115176361; 34.22088925201114;
+                                32.659035862082305; 4.251328270034034; -95.11125319074877; 93.60465776802289; 101.22095693456065; -13.005473826191214; 34.821112604424506;
+                                32.8590196666151; 4.136842028929456; -96.03274505917389; 87.80980478418935; 100.03035441483601; -13.828306292543317; 31.827773292465967;
+                                34.81600015470297; 3.4517193784808167; -97.32804402266399; 83.43077404664295; 97.71463224203279; -13.872414768332302; 32.449751750077354"
+                                speed_percentage="20"
+                                disable_self_or_obstacle_avoidance_planning="true"
+                                disable_self_or_obstacle_collision_detection="true"
+                                msg="{arm_msg}"
+                                pose="{arm_pose}"/>
+          <HandAction server_name="/avaia_hand"
+                                server_timeout="2000"
+                                action_name="prepare_right"
+                                success="{hand_success}"
+                                status="{hand_status}"/>
+          <ArmAction server_name="/arm"
+                                server_timeout="30000"
+                                action_name="reset"
+                                action_index="0"
+                                action_param="0"
+                                arm_index="1"
+                                goal_left="0;0;0;0;0;0;1"
+                                goal_right="0;0;0;0;0;0;1"
+                                waypoints_left=""
+                                waypoints_right="14.40878688698948; -6.312406936494431; -93.35567058903156; 99.05414845683786; 88.7244981822401; 2.901804706837871; 35.69920303797958"
+                                speed_percentage="20"
+                                disable_self_or_obstacle_avoidance_planning="true"
+                                disable_self_or_obstacle_collision_detection="true"
+                                msg="{arm_msg}"
+                                pose="{arm_pose}"/>
+
+          <Parallel failure_count="1"
+                          success_count="3">
+              <TorsoAction server_name="/Torso/torso_action_service"
+                          server_timeout="3000"
+                          torso_height="0"
+                          torso_yaw="0"
+                          head_pitch="0"
+                          head_yaw="0"
+                          max_velocity="0.15"
+                          work_mode="3"
+                          success="{torso_success}"
+                          msg="{torso_msg}"/>
+                  <ArmAction server_name="/arm"
+                          server_timeout="3000"
+                          action_name="start_teleop"
+                          action_index="0"
+                          action_param="0"
+                          arm_index="101"
+                          goal_left="0;0;0;0;0;0;1"
+                          waypoints_left=""
+                          goal_right="0;0;0;0;0;0;1"
+                          waypoints_right=""
+                          speed_percentage="15"
+                          msg="{arm_msg}"
+                          pose="{arm_pose}"/>
+                  <HandAction server_name="/avaia_hand"
+                          server_timeout="2000"
+                          action_name="stop_teleop_both"
+                          success="{hand_success}"
+                          status="{hand_status}"/>
+        </Parallel>
+
+
+        <!--reset arm hand torso-->
+          <Parallel failure_count="1"
+                          success_count="3">
+                <TorsoAction server_name="/Torso/torso_action_service"
+                                server_timeout="5000"
+                                torso_height="35"
+                                torso_yaw="35"
+                                head_pitch="0"
+                                head_yaw="0"
+                                max_velocity="0.3"
+                                work_mode="0"
+                                success="{torsor_success}"
+                                msg="{torsor_msg}"/>
+                <HandAction server_name="/avaia_hand"
+                                server_timeout="2000"
+                                action_name="reset_both"
+                                success="{hand_success}"
+                                status="{hand_status}"/>
+                <ArmAction server_name="/arm"
+                                server_timeout="30000"
+                                action_name="reset"
+                                action_index="0"
+                                action_param="0"
+                                arm_index="2"
+                                goal_left="0;0;0;0;0;0;1"
+                                waypoints_left="0;-30;-90;0;0;0;0;0;-5;0;0;0;0;0"
+                                goal_right="0;0;0;0;0;0;1"
+                                waypoints_right="0;-30;-90;0;0;0;0;0;-5;0;0;0;0;0"
+                                speed_percentage="30"
+                                disable_self_or_obstacle_avoidance_planning="true"
+                                disable_self_or_obstacle_collision_detection="true"
+                                msg="{arm_msg}"
+                                pose="{arm_pose}"/>
+        </Parallel>
+        
+    </Sequence>
+  </BehaviorTree>
+</root>
+
+
+
+

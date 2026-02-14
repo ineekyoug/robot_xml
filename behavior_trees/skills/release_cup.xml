@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="ReleaseCup">
+  <BehaviorTree ID="ReleaseCup">
+    <Sequence>
+      <IfThenElse>
+        <CheckForceService sample_time="5"
+                          wait_sec="10.0"
+                          force_topic="/right_force_sensor_data"
+                          threshold_fx="2"
+                          threshold_fy="2"
+                          threshold_fz="2"/>
+        <Sequence>
+          <Parallel failure_count="1"
+                    success_count="3">
+            <HandAction server_name="/avaia_hand"
+                        server_timeout="2000"
+                        action_name="reset_right"
+                        success="{hand_success}"
+                        status="{hand_status}"/>
+            <SleepAction msec="5000"/>
+            <ArmAction server_name="/arm"
+                      server_timeout="30000"
+                      action_name="reset"
+                      action_index="0"
+                      action_param="0"
+                      arm_index="2"
+                      goal_left="0;0;0;0;0;0;1"
+                      waypoints_left="0;-20;-50;0;0;0;0;0;-5;0;0;0;0;0"
+                      goal_right="0;0;0;0;0;0;1"
+                      waypoints_right="0;-20;-50;0;0;0;0;0;-5;0;0;0;0;0"
+                      speed_percentage="30"
+                      msg="{arm_msg}"
+                      pose="{arm_pose}"/>
+          </Parallel>
+        </Sequence>
+        <Sequence>
+            <ArmAction server_name="/arm"
+                      server_timeout="30000"
+                      action_name="reset"
+                      action_index="0"
+                      action_param="0"
+                      arm_index="2"
+                      goal_left="0;0;0;0;0;0;1"
+                      waypoints_left="0;-20;-50;0;0;0;0;0;-5;0;0;0;0;0"
+                      goal_right="0;0;0;0;0;0;1"
+                      waypoints_right="0;-20;-50;0;0;0;0;0;-5;0;0;0;0;0"
+                      speed_percentage="30"
+                      msg="{arm_msg}"
+                      pose="{arm_pose}"/>
+           <HandAction server_name="/avaia_hand"
+                server_timeout="2000"
+                action_name="reset_right"
+                success="{hand_success}"
+                status="{hand_status}"/>
+        </Sequence>
+      </IfThenElse>
+    </Sequence>
+  </BehaviorTree>
+</root>

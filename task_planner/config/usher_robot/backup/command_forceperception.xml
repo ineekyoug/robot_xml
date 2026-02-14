@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="forceperception">
+      <voice> 首先，我们的原位力感知传感器采用了无弹性体设计，这样它就能与传动部件紧密结合，实现了超高的刚度。这样的设计突破了空间和重量的限制，让我们的机器人核心部件变得更加轻薄；
+接着，我们的微型六维力传感器还采用了硅应变敏感技术，能够非常灵敏地感知到力量的变化；
+再加上我们突破性的低应力技术，让传感器的精度更高，而且串扰的影响更低，能够精确地感知到周围的每一个微小变化。
+最后，我们把这些轻量化、高精度的力感知技术融合在一起，让我们的机器人实现了更紧凑的本体结构，更精细、更安全的人机协作。</voice>
+      <voice_en> First, our in-situ force sensing sensor uses an elastic-free design, allowing it to tightly integrate with the transmission components, achieving an ultra-high stiffness. This design breakthrough overcomes the limitations of space and weight, making our robot's core components more lightweight and thin.
+Next, our mini six-axis force sensor also uses silicon strain-sensitive technology, which can very sensitively detect changes in force.
+Plus, our breakthrough low-stress technology makes the sensor more accurate and reduces the impact of crosstalk, allowing it to precisely perceive every tiny change in the surroundings.
+Finally, we've integrated these lightweight, high-precision force sensing technologies to enable our robots to have a more compact structure and more delicate, safer human-robot collaboration. </voice_en>
+      <!-- <skill>
+         <name>forceperception</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+
+</demo>
+

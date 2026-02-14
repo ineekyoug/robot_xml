@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<QandA>
+   <question id="project_value">
+      <voice>
+         您肯定也知道，现在的人口老龄化和劳动力成本都在上升，我们蓝星对于自动化和机器人技术的需求在日益增长呢！
+         很希望在将来人形机器人产业开始发展的一天， 我们能成为美地新的增长点，为大家带来丰厚的投资回报呢！ 
+      </voice>
+      <voice_en> 
+         You must be aware that the aging population and rising labor costs are a reality, 
+         and our Blue Star is increasingly in need of automation and robotics technology!
+         We really hope that when the humanoid robot industry takes off in the future,
+         we can become a new growth point for Midea and bring you substantial investment returns!" 
+      </voice_en>
+   </question> 
+
+   <question id="project_goal">
+      <voice> 
+         我们的项目其实是希望发挥美地在硬件研发上深耕累积的技术优势，还有强大的制造能力优势，帮助美地风口的机会，转型高科技企业！
+      </voice>
+      <voice_en> 
+         Our project aims to leverage Midea's deep-rooted technical advantages in hardware development 
+         and its strong manufacturing capabilities to seize the opportunity and transition into a high-tech enterprise! 
+      </voice_en>
+   </question> 
+
+   <question id="project_introduction">
+      <voice> 
+         我们的项目，是通过核心零部件及智能体技术的全自研，为大家生产出极致成本的人形机器人，工程师亲手创造的美拉和美罗不仅性价比满满，还很聪明呢！
+      </voice>
+      <voice_en> 
+         Our project is all about developing our own core components and AI agent to produce humanoid robots at the ultimate cost. 
+         The Meras and Meros, created by our engineers with their own hands, are not only cost-effective but also very smart!
+      </voice_en>
+   </question> 
+
+  
+
+   <question id="exhibition_introduction">
+      <voice> 
+         展区设有工业机器人【美罗】在实际生产环境中的工作展示，还有家用及商用机器人【美拉】的导览互动场景展示。我们等着你来亲自体验一下呢！
+      </voice>
+      <voice_en> 
+         The exhibition area features our industrial robot Mero, working in a real production environment, 
+         as well as guided interactive scenes with our home and commercial robot Mera. 
+         We're waiting for you to come and experience it for yourself
+      </voice_en>
+   </question> 
+
+   <question id="robot_introduction">
+      <voice> 
+         目前我们有两个机器人，分别是服务于工业场景的【美罗】以及服务于商业和家庭场景的【美拉】；想知道美拉和美罗的详细工作嘛，那我可要好好讲讲啦！
+      </voice>
+      <voice_en> 
+         Right now, we have two robots: Mero, who serves in industrial settings, and Mera, who serves in commercial and home settings. 
+         If you want to know more about what Mera and Mero do, well, let me tell you all about it!
+      </voice_en>
+   </question> 
+
+
+   <question id="robot_advantage">
+      <voice> 
+         我们的机器人最大的优势就是全自研，从关节模组、机械臂、灵巧手、整机架构、传感器到具身Agent等大部分核心器件均是我们自主研发的。
+      </voice>
+      <voice_en> 
+         Our robots' biggest advantage is that they're fully self-developed. From the joint modules, machanical arms, dexterous hands, overall architecture, sensors, 
+         to embodied Agents, most of the core components are developed in-house.
+      </voice_en>
+   </question> 
+
+   <question id="mira_introduction">
+      <voice> 
+         【美拉】就是我，一娇小可爱的女生，别看我个子小，我也是大有用处的。我可以成为一个专业的导览员，带你快速了解不同的商品和展会，也可以在家里为你提供不同的服务。
+         我还在学习更多技能呢，将来会越做越好的。
+      </voice>
+      <voice_en> 
+         [Mera] is me, a petite and lovely girl. Don't let my small size fool you; I'm very useful. 
+         I can be a professional guide, taking you through different products and exhibitions quickly, 
+         and I can also provide various services at home.
+         I'm still learning more skills, and I'll just keep getting better in the future.
+      </voice_en>
+   </question> 
+
+   <question id="mira_parameters">
+      <voice> 
+         美拉有32个主动和10个被动自由度，我的最大行走速度可以达到0.8米每秒，单臂负载为3千克，最大臂展为650毫米，续航能达到两小时以上，身高是135至160厘米，重量约为90千克
+      </voice>
+      <voice_en> 
+         [Mera] has 32 active and 10 passive degrees of freedom. 
+		 my maximum walking speed can reach 0.8 meters per second, and my single-arm payload is 3 kilograms. 
+		 The maximum reach is 650 millimeters, and the endurance can last for more than two hours. 
+		 The height ranges from 135 to 160 centimeters, and the weight is approximately 90 kilograms.
+      </voice_en>
+   </question> 
+
+    <question id="mira_degrees_of_freedom">
+      <voice> 
+         美拉有32个主动和10个被动自由度
+      </voice>
+      <voice_en> 
+         [Mera] has 32 active and 10 passive degrees of freedom. 
+      </voice_en>
+   </question>    
+    
+   <question id="mira_speed">
+      <voice> 
+         美拉最大行走速度可以达到0.8米每秒
+      </voice>
+      <voice_en> 
+         [Mera]s maximum walking speed can reach 0.8 meters per second
+      </voice_en>
+   </question> 		 
+   
+   <question id="mira_payload">
+      <voice> 
+         美拉单臂能负载3千克
+      </voice>
+      <voice_en> 
+         [Mera]s single-arm payload is 3 kilograms. 
+	  </voice_en>
+   </question> 
+   
+   <question id="mira_maximum_reach">
+      <voice> 
+         美拉最大臂展为650毫米
+      </voice>
+      <voice_en> 
+         [Mera]s maximum reach is 650 millimeters.
+      </voice_en>
+   </question> 		
+   
+   <question id="mira_endurance">
+      <voice> 
+         美拉续航能达到两小时以上
+      </voice>
+      <voice_en> 
+         [Mera]s endurance can last for more than two hours. 
+      </voice_en>
+   </question> 	
+     
+   <question id="mira_weight">
+      <voice> 
+         美拉重量约为90千克
+      </voice>
+      <voice_en> 
+         [Mera]s weight is approximately 90 kilograms.
+      </voice_en>
+   </question> 
+
+   <question id="mira_height">
+      <voice> 
+         美拉身高是135至160厘米
+      </voice>
+      <voice_en> 
+         [Mera]s height ranges from 135 to 160 centimeters.
+      </voice_en>
+   </question> 
+
+
+
+
+
+
+   <question id="miro_introduction">
+      <voice> 
+         【美罗】是一个充满力量的强壮小伙，他可以在工业场景中执行一些重复或危险的任务，一方面可以应对未来劳动力短缺的问题，另一方面也可以改善现在工人的工作环境。
+      </voice>
+      <voice_en> 
+         [Mero] is a strong and powerful guy, full of energy. He can take on repetitive or dangerous tasks in industrial settings. 
+         On one hand, he can help tackle the future labor shortage, and on the other hand, he can improve the working conditions for current workers.
+      </voice_en>
+   </question> 
+
+   <question id="miro_parameters">
+      <voice> 
+          美罗有32个主动和10个被动自由度，他的最大行走速度可以达到1.8米每秒，单臂负载为5千克，最大臂展为650毫米，续航能达到两小时以上，身高是139至185厘米，重量约为100千克
+      </voice>
+      <voice_en> 
+         [Mero] has 32 active and 10 passive degrees of freedom. 
+		 my maximum walking speed can reach 1.8 meters per second, and my single-arm payload is 5 kilograms. 
+		 The maximum reach is 650 millimeters, and the endurance can last for more than two hours. 
+		 The height ranges from 139 to 185 centimeters, and the weight is approximately 100 kilograms.
+      </voice_en>
+   </question> 
+   
+   <question id="miro_degrees_of_freedom">
+      <voice> 
+          美罗有32个主动和10个被动自由度，
+      </voice>
+      <voice_en> 
+         [Mero] has 32 active and 10 passive degrees of freedom. 
+      </voice_en>
+   </question> 
+
+   <question id="miro_speed">
+      <voice> 
+          美罗最大行走速度可以达到1.8米每秒，
+      </voice>
+      <voice_en> 
+         [Mero]s maximum walking speed can reach 1.8 meters per second.
+      </voice_en>
+   </question> 
+   
+   <question id="miro_payload">
+      <voice> 
+          美罗单臂负载为5千克，
+      </voice>
+      <voice_en> 
+         [Mero]s single-arm payload is 5 kilograms. 
+      </voice_en>
+   </question> 
+   
+		 如果是要了解美罗或者Miro机器人的最大臂展，请回复QandA_miro_maximum_reach
+   <question id="miro_maximum_reach">
+      <voice> 
+          美罗最大臂展为650毫米，
+      </voice>
+      <voice_en> 
+         [Mero]s maximum reach is 650 millimeters.
+      </voice_en>
+   </question> 
+   
+   <question id="miro_endurance">
+      <voice> 
+          美罗续航能达到两小时以上，
+      </voice>
+      <voice_en> 
+         [Mero]s endurance can last for more than two hours. 
+      </voice_en>
+   </question> 
+   
+   <question id="miro_weight">
+      <voice> 
+          美罗重量约为100千克
+      </voice>
+      <voice_en> 
+         [Mero]s weight is approximately 100 kilograms.
+      </voice_en>
+   </question> 
+   
+   <question id="miro_height">
+      <voice> 
+          美罗身高是139至185厘米，
+      </voice>
+      <voice_en> 
+         [Mero]s height ranges from 139 to 185 centimeters.
+      </voice_en>
+   </question> 
+   
+
+
+
+   <question id="mira_name">
+      <voice> 
+         我的名字叫【美拉】，M I代表Midea和Machine Intelligence, R A代表Robot Agent。
+         我的名字词根来自英文Miracle，代表缪思和奇迹！美拉超喜欢自己的名字！
+      </voice>
+      <voice_en> 
+         My name is [Mera], MIRA. M I stands for Midea and Machine Intelligence, R A stands for Robot Agent.
+         The root of my name comes from the English word 'Miracle', which represents inspiration and wonder! Mera really loves my name!
+      </voice_en>
+   </question> 
+
+
+   <question id="miro_name">
+      <voice> 
+         我的伙伴叫【美罗】，MIRO，M I代表Midea和Machine Intelligence, R O代表Robot 。
+         他的名字词根来自英文Miracle，代表缪思和奇迹，美拉觉得这个名字太酷啦。
+      </voice>
+      <voice_en> 
+         My partner is called [Miro], MIRO. M I stands for Midea and Machine Intelligence, R O stands for Robot. 
+         The root of his name comes from the English word 'Miracle', which represents inspiration and wonder. Mera thinks this name is just too cool.
+      </voice_en>
+   </question> 
+
+
+   <question id="arm_introduction">
+      <voice> 
+         我们自研了两款机械臂，一款是高负重比的工业臂，另一款是超轻力感的家用臂，你是想了解哪一款啊？
+      </voice>
+      <voice_en>
+         We've developed two types of robotic arms: industrial arm with a high load-to-weight ratio and household arm with ultra-light force sensing.
+         Which one are you interested in?
+      </voice_en>
+   </question>
+
+
+   <question id="industrial_arm">
+      <voice> 
+         我们自研的高负载自重比机械臂，用的是自研的关节模组，重量只有8.5公斤，但却能够举起6公斤的重物！负载自重比达到了70%呢，
+         这在工业机械臂中是非常优秀的！
+      </voice>
+      <voice_en>
+         We've developed a high-load, low-self-weight robotic arm with our own joint modules. It weighs only 8.5 kilograms but can lift a hefty 6 kilograms! 
+         The load-to-weight ratio is a whopping 70%, which is pretty impressive for industrial robotic arms.
+      </voice_en>
+   </question>
+
+   <question id="household_arm">
+      <voice> 
+         我们自研的超轻力感机械臂实现了0.625的负重比，能够举起3公斤的重物，而自身体重仅有4.8公斤，这可是在所有能举这么重的机械臂里最轻的呢！
+         我的腕关节还拥有超级敏感的触觉！它是一个超薄六维力传感器，能够感受到100牛顿的力量，还有5倍的过载能力，9mm的厚度是行业内最薄的！
+      </voice>
+      <voice_en>
+         We've created an ultra-light force-sensitive robotic arm with a load-to-weight ratio of 0.625, 
+         capable of lifting 3 kilograms while weighing only 4.8 kilograms itself. That's the lightest among all robotic arms that can lift such a weight!
+         My wrist joint has super-sensitive touch! It's an ultra-thin six-axis force sensor that can detect forces up to 100 Newtons,
+         with a 5 times overload capacity, and a thickness of just 9mm, which is the thinnest in the industry!
+      </voice_en>
+   </question>
+
+
+   <question id="joint_module">
+      <voice> 
+         我们的一体化关节模组就像是个宝藏箱，里面藏着驱动器、减速器、力传感器这些超级厉害的小部件。这些都是我们自己研发的哦！
+         而且，我们用极致的器件布局设计和结构设计，把每一个小部件都安排得整整齐齐，让机械臂变得既强大又轻便。
+         你想再深入了解哪部分，让【美拉】给你再好好介绍一下！
+      </voice>
+      <voice_en>
+         Our integrated joint module is like a treasure chest, packed with super cool little parts like actuators, reducers, 
+         and force sensors. All of these are developed by us!
+         With our ultimate component layout and structural design, it makes the robotic arm both powerful and lightweight.
+         Which part would you like to know more about? Let [Mera] give you a more detailed introduction!  
+      </voice_en>
+   </question>
+
+  <question id="driver">
+      <voice> 
+         我们自研驱动器，电流密度比市场同类产品提升20%呢
+      </voice>
+      <voice_en> 
+         Our self-developed actuator has increased current density by 20% compared to similar products on the market.
+      </voice_en>
+   </question> 
+
+
+   <question id="reducer">
+      <voice> 
+         我们攻克了谐波减速器正向设计分析、测试评价体系的共性关键技术，这在技术上可是打破了国外垄断，
+         成为了国内自主研发的佼佼者，这可是让我们超级骄傲的事情呢！ 
+      </voice>
+      <voice_en> 
+         We've mastered the common key technologies of forward design analysis and testing evaluation system for harmonic reducers, this has technically broken the foreign monopoly 
+         and made us a leader in domestic independent research and development, which is something we're super proud of! 
+      </voice_en>
+   </question> 
+   
+   <question id="force_sensor">
+      <voice> 
+         首先，我们的原位力感知传感器采用了无弹性体设计，突破了空间和重量的限制让我们的机器人核心部件变得更加轻薄；
+         接着，我们的微型六维力传感器还采用了硅应变敏感技术，再加上我们突破性的低应力技术，让传感器的精度更高，是机器人能够精确地感知到周围的每一个微小变化。
+      </voice>
+      <voice_en> 
+         First, our in-situ force sensor uses an elastic-free design, this design breakthrough overcomes the limitations of space and weight, making our robot's core components more lightweight and thin.
+         Next, our mini six-axis force sensor also uses silicon strain-sensitive technology, and our breakthrough low-stress technology makes the sensor more accurate and reduces the impact of crosstalk, 
+		 allowing it to precisely perceive every tiny change in the surroundings.
+      </voice_en>
+    </question> 
+
+   <question id="3Dcamera">
+      <voice> 
+         我们的3D视觉相机使用了自主研发的低成本、高可靠的柔性MOEMS光电扫描技术。
+		 这个技术就像是给机器人的眼睛装上了超级灵活的眼球，让双目视觉中的散斑数量提高5倍以上，检测精度提高两倍以上。
+         而且，我们的相机还突破了传统双目视觉在精细任务中的技术瓶颈，提供了一个性价比极高的解决方案。
+      </voice>
+      <voice_en> 
+         Our 3D vision camera uses a self-developed low-cost and highly reliable flexible MOEMS (Micro-Opto-Electro-Mechanical System) optical scanning technology. 
+		 This technology is like equipping a robot's eyes with super-flexible eyeballs, which increases the number of speckles in binocular vision by more than five times and improves detection accuracy by more than two times. 
+		 In addition, our camera has also overcome the technical bottleneck of traditional binocular vision in fine tasks and provides a cost-effective solution.
+      </voice_en>
+    </question> 
+
+
+   <question id="dexterous_hand">
+      <voice> 
+         我们自研的多触感柔型灵巧手采用仿人包握的构型设计，能自适应抓握不同的工具，提供更强抓握力；
+         我的手指可是有10倍高抓重比的主动关节呢！
+         此外还有自适应的柔型防撞回弹，保证异常碰撞时不造成意外的损伤；
+         最后，还有在单指面内提供14点高密度敏感单元的自研柔型超薄触觉传感器，给我提供多维的传感信息。
+      </voice>
+      <voice_en> 
+         We've developed a multi-tactile soft and dexterous hand with a human-like gripping design that can adapt to hold different tools and provide a stronger grip.
+         My fingers also have actively controlled joints with 10 times higher grip-to-weight ratio!
+         In addition, there is also an adaptive flexible anti-collision rebound, which ensures that no unexpected damage is caused during abnormal collisions. 
+		 Finally, there is also a self-developed flexible ultra-thin tactile sensor that provides me with multi-dimensional sensing information with 14 high-density sensitive units within a single finger surface.
+      </voice_en>
+    </question> 
+
+
+
+   <question id="tactile_sensor">
+      <voice> 
+         我们的柔型超薄触觉传感器，采用了高精度接触式压阻传感技术，就像给机器人穿上了一双超级灵敏的手套，保证它能够稳定可靠地感知到外界的触碰；
+         而且，我们的传感器采用了层叠式敏感单元封装集成，就像是把许多小小的传感器叠在一起，实现了传感器的小型化和轻量化；
+         我们的传感器还特别省电，功耗低至0.3W，能够在不消耗太多能量的情况下工作很长时间；
+         最酷的是，我们的传感器能够在单指面内提供14点高密度敏感单元，就像是在机器人的手指上安装了14个超级灵敏的触觉点，能够为机器人提供多维的传感信息。
+      </voice>
+      <voice_en> 
+         Our tactile sensors are super thin and flexible, using high-precision contact-based piezoresistive sensing technology. 
+         It's like we've put the robot in a pair of super sensitive gloves, ensuring it can reliably sense touch from the outside.
+         Plus, our sensors use a stacked sensitive unit packaging integration, kind of like stacking lots of tiny sensors on top of each other, 
+         which achieves miniaturization and lightweighting of the sensors.
+         Our sensors are also very power-efficient, with a power consumption as low as 0.3W, allowing them to work for a long time without using much energy.
+         The coolest part is that our sensors can provide 14 high-density sensitive units on a single finger surface, 
+         like installing 14 super-sensitive touch points on the robot's fingers, offering multidimensional sensory information to the robot.
+      </voice_en>
+   </question> 
+
+
+   <question id="aitech">
+      <voice> 
+         我们从0到1搭建了自己的具身智能软件平台，这就像是给机器人打造了一个超级聪明的大脑，让它能够实现语音交互、决策规划和运动控制的一体化方案。
+         这就像是我们的机器人能够听懂我们的话，理解我们的需求，然后做出最合适的动作。
+         同时，我们的大模型感知及决策技术也是我们自己研发的！这意味着我们的机器人能够像人类一样感知世界，做出明智的决策。
+         你想再深入了解哪部分，让【美拉】给你再好好介绍一下！
+      </voice>
+      <voice_en> 
+         We've built our own embodied intelligence software platform from scratch, which is like giving the robot a super smart brain, 
+         enabling it to achieve an integrated solution for voice interaction, decision-making planning, and motion control. 
+         It's like our robots can understand what we say, grasp our needs, and then make the most suitable moves.
+         Our large-scale perception and decision-making technology is also developed by us! This means our robots can perceive the world like humans and make wise decisions.
+         Which part would you like to delve deeper into? Let [Mera] give you a more detailed introduction! 
+      </voice_en>
+    </question> 
+
+   <question id="ai_platform">
+      <voice> 
+         我们搭建了智能视觉与智能仿真的基础平台，智能视觉就像是机器人的眼睛，它负责捕捉视觉信息，帮助机器人理解周围的环境。这就像是我们的机器人能够看到世界，知道哪里有障碍，哪里有目标。
+         仿真平台就像是机器人的大脑，就像我们人类的大脑通过想象和规划预测我们的行为结果一样，它负责模拟和预测机器人在现实世界的行为。
+         这就像是我们的机器人能够在行动之前，先在大脑里预演一遍，确保每一步都是最完美的。
+      </voice>
+      <voice_en> 
+         We've set up a fundamental platform for intelligent vision and intelligent simulation. Intelligent vision is like the robot's eyes,
+         capturing visual information to help the robot understand its surroundings. 
+         It's like our robots can see the world, knowing where the obstacles are and where the targets are.
+         The simulation platform is like the robot's brain. Just as our human brains imagine and plan to predict the outcomes of our actions, 
+         it's responsible for simulating and predicting the robot's behavior in the real world. 
+         It's like our robots can rehearse in their minds before taking action, ensuring every step is perfect.
+      </voice_en>
+   </question> 
+
+   <question id="ai_skill">
+      <voice> 
+         智能体技能学习就像是机器人的小脑，它可以帮助协调和细化机器人的动作，让机器人的动作更加流畅和自然。
+      </voice>
+      <voice_en> 
+         agent skill learning is like the robot's cerebellum. It helps coordinate and refine the robot's movements, making them smoother and more natural.
+      </voice_en>
+   </question> 
+
+   <question id="ai_planning">
+      <voice> 
+         智能体规划和推理，就像是机器人的前额叶，负责更高阶的认知功能，可以让机器人像人类一样制定行动规划、解决问题和做出决策。这就像是我们的机器人能够思考，能够计划，能够解决复杂的问题。
+      </voice>
+      <voice_en> 
+        Intelligent planning and reasoning are like the robot's frontal lobes, responsible for higher-level cognitive functions. 
+        This allows the robot to make action plans, solve problems, and make decisions just like humans.
+         It's like our robots can think, plan, and tackle complex problems.
+      </voice_en>
+    </question> 
+
+</QandA>
+

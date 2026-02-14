@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="HalogenDetVLAModelCall4">
+  <BehaviorTree ID="HalogenDetVLAModelCall4">
+    <Sequence>
+        
+        <!--VLA inference-->
+                
+        <!-- 添加20秒延时 -->
+        <!-- <Sleep msec="2000"/>
+        <VlaModelCallService service_name="/vla_model_call_service"
+                                server_timeout="500000"
+                                prompt="pre_action"
+                                time_out="60.0"
+                                feedback="{vla_feedback1}"/>
+        <Sleep msec="1000"/>
+        <VlaModelCallService service_name="/vla_model_call_service"
+                                server_timeout="500000"
+                                prompt="Use the halogen inspection gun tip to scan the solder joints in the gaps."
+                                time_out="120.0"
+                                feedback="{vla_feedback2}"/>        -->
+        <VlaModelCallService service_name="/vla_model_call_service"
+                                server_timeout="500000"
+                                prompt="vg_scan"
+                                time_out="120.0"
+                                feedback="{vla_feedback2}"/>  
+        
+    </Sequence>
+  </BehaviorTree>
+</root>
+
+
+
+

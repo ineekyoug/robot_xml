@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="HalogenDetVLAModelCall1">
+  <BehaviorTree ID="HalogenDetVLAModelCall5">
+    <Sequence>
+        <!--stop teleop-->
+        <Parallel failure_count="1"
+                        success_count="3">
+                <TorsoAction server_name="/Torso/torso_action_service"
+                        server_timeout="3000"
+                        torso_height="0"
+                        torso_yaw="0"
+                        head_pitch="0"
+                        head_yaw="0"
+                        max_velocity="0.15"
+                        work_mode="3"
+                        success="{torso_success}"
+                        msg="{torso_msg}"/>
+                <ArmAction server_name="/arm"
+                        server_timeout="3000"
+                        action_name="start_teleop"
+                        action_index="0"
+                        action_param="0"
+                        arm_index="101"
+                        goal_left="0;0;0;0;0;0;1"
+                        waypoints_left=""
+                        goal_right="0;0;0;0;0;0;1"
+                        waypoints_right=""
+                        speed_percentage="15"
+                        msg="{arm_msg}"
+                        pose="{arm_pose}"/>
+                <HandAction server_name="/avaia_hand"
+                        server_timeout="2000"
+                        action_name="stop_teleop_both"
+                        success="{hand_success}"
+                        status="{hand_status}"/>
+        </Parallel>
+
+        <!-- reset arm hand torso-->
+        <Sequence>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                                server_timeout="5000"
+                                torso_height="57.30"
+                                torso_yaw="45.84"
+                                head_pitch="-30.0"
+                                head_yaw="0.0"
+                                max_velocity="0.15"
+                                work_mode="0"
+                                success="{torsor_success}"
+                                msg="{torsor_msg}"/>
+                <HandAction server_name="/avaia_hand"
+                                server_timeout="2000"
+                                action_name="reset_both"
+                                success="{hand_success}"
+                                status="{hand_status}"/>
+                <ArmAction server_name="/arm"
+                                server_timeout="30000"
+                                action_name="reset"
+                                action_index="0"
+                                action_param="0"
+                                arm_index="2"
+                                goal_left="0;0;0;0;0;0;1"
+                                waypoints_left="0;-20;-90;0;0;0;0;0;-5;0;0;0;0;0"
+                                goal_right="0;0;0;0;0;0;1"
+                                waypoints_right="0;-20;-90;0;0;0;0;0;-5;0;0;0;0;0"
+                                speed_percentage="30"
+                                msg="{arm_msg}"
+                                pose="{arm_pose}"/>
+        </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>
+
+
+
+

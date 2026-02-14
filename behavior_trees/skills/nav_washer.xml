@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="NavWasher">
+  <BehaviorTree ID="NavWasher">
+    <Sequence>
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="-0.9545;-2.4649;3.124"
+                 success="{success}"
+                 msg="{msg}"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="嗨！！！科慕"
+                    type="text"/>
+      <SleepAction msec="5000"/>              
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="打开洗衣机门"
+                    type="text"/>
+      <SleepAction msec="5000"/>  
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="嗨！！！科慕"
+                    type="text"/>
+      <SleepAction msec="5000"/>  
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="打开肝衣机门"
+                    type="text"/>
+      <SleepAction msec="5000"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="嗨！！！科慕"
+                    type="text"/>
+      <SleepAction msec="5000"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="关闭洗衣机门"
+                    type="text"/>
+      <SleepAction msec="5000"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="嗨！！！科慕"
+                    type="text"/>
+      <SleepAction msec="5000"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="关闭肝衣机门"
+                    type="text"/>
+      <SleepAction msec="5000"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

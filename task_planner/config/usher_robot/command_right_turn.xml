@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="navigation">
+      <voice> 好的 </voice>
+      <voice_en> sure </voice_en>
+      <navigation>
+         <name>navigation</name>
+         <type>2</type>
+         <param>-30</param>
+      </navigation>
+   </task>
+</demo>

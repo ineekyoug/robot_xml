@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="WAICSTEP3">
+  <include path="./reset.xml"/>
+  <BehaviorTree ID="WAICSTEP3">
+    <Sequence>
+      <!-- "它除了是生活百科助手，更是你的家居生活管家" -->
+      <SystemCallService command="aplay /home/miro/waic_wmv/5.wav"/>
+      <SleepAction msec="2500"/>
+      <!-- "嗨！colom打开干衣机门，我要做饭了，再帮我准备一杯拿铁" -->
+      <SystemCallService command="aplay ~/waic_wmv/6.wav"/>
+      <SubTree ID="Reset" node="{node}"
+                          bt_loop_duration="{bt_loop_duration}"
+                          wait_for_service_timeout="{wait_for_service_timeout}" /> 
+      <SleepAction msec="2500"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

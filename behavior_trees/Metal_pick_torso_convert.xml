@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                            server_timeout="60000"
+                            torso_height="93.0"
+                            torso_yaw="32.0"
+                            head_pitch="-28.6"
+                            head_yaw="2"
+                            max_velocity="0.15"
+                            work_mode="0"
+                            success="{success}"
+                            msg="{msg}"/>
+                
+                <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="0.47155;-0.35036;-0.10856;-0.43011;-0.56134;0.64196;-0.29629;"
+                              source_frame="torso_up_link"
+                              target_frame="base_link"
+                              target_pose="{est_pose_pre}"
+                              feedback="{tf_trans_feedback}"/>
+
+                 <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="0.60852;-0.33670;-0.16715;-0.44162;-0.53169;0.65588;-0.30346"
+                              source_frame="torso_up_link"
+                              target_frame="base_link"
+                              target_pose="{est_pose}"
+                              feedback="{tf_trans_feedback}"/>
+         
+            </Sequence>
+    </BehaviorTree>
+</root>

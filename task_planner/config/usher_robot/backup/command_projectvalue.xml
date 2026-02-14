@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="projectvalue">
+      <voice>您肯定也知道，现在的人口老龄化和劳动力成本都在上升，我们蓝星对于自动化和机器人技术的需求在日益增长呢！
+很希望在将来人形机器人产业开始发展的一天， 我们能成为美地新的增长点，为大家带来丰厚的投资回报呢！ 
+      </voice>
+      <voice_en> You must be aware that the aging population and rising labor costs are a reality, and our Blue Star is increasingly in need of automation and robotics technology!
+We really hope that when the humanoid robot industry takes off in the future, we can become a new growth point for Midea and bring you substantial investment returns!" </voice_en>
+      <!-- <skill>
+         <name>projectvalue</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+</demo>

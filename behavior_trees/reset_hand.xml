@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                <HandAction server_name="/avaia_hand"
+                            server_timeout="2000"
+                            action_name="reset_both"
+                            success="{hand_success}"
+                            status="{hand_status}"/>
+            </Sequence>
+    </BehaviorTree>
+</root>

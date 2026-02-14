@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="industrialrobot">
+      <voice> 我们自研的高负载自重比机械臂，采用自研关节模组，本体重量8.5千克，实现最大有效负载6千克，负载自重比达到了百分之70 </voice>
+      <voice_en>  </voice_en>
+      <!-- <skill>
+         <name>industrialrobot</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+
+</demo>
+
+

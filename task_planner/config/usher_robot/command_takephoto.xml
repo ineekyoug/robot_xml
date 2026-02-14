@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="takephoto">
+      <voice> 那让我们一起来比个心，拍个照吧 </voice>
+      <voice_en> Let's make a heart gesture together and take a photo! </voice_en>
+      <skill>
+         <name>takephoto</name>
+         <type>0</type>
+         <object>0</object>
+         <param>0</param>
+      </skill>
+   </task>
+</demo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="WAICSTEP1">
+  <include path="./introduction.xml"/>
+  <include path="./reset.xml"/>
+  <BehaviorTree ID="WAICSTEP1">
+    <Sequence>
+      <NavAction server_name="/base_navigate"
+                  server_timeout="60000"
+                  action_name="navigation"
+                  type="0"
+                  target_pose="2.72886;-1.132107;2.4259233"
+                  success="{success}"
+                  msg="{msg}"/>
+      <Parallel failure_count="1"
+                success_count="2">     
+        <!-- "嗨! 大家好! 我是机器人美拉， 我正在2025世界人工智能大会现场, 为大家带来图灵智能厨房的AI黑科技!"  -->
+        <SystemCallService command="aplay ~/waic_wmv/1.wav &"/>
+        <SubTree ID="Introduction" node="{node}"
+                                        bt_loop_duration="{bt_loop_duration}"
+                                        wait_for_service_timeout="{wait_for_service_timeout}" />
+      </Parallel>
+      <SleepAction msec="5500"/>
+      <!-- "我面前这台是AI智慧屏，它是你的AI智能管家，可以一屏智控全屋" -->
+      <SystemCallService command="aplay ~/waic_wmv/2.wav"/>
+      <SleepAction msec="2500"/>
+      <!-- "嗨! colmo，介绍一下你自己" -->
+      <SystemCallService command="aplay ~/waic_wmv/3.wav"/> 
+      <SleepAction msec="2500"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

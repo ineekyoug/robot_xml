@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="industrialrobot">
+      <voice> 我们从0到1搭建了自己的具身智能软件平台，这就像是给机器人打造了一个超级聪明的大脑，让它能够实现语音交互、决策规划和运动控制的一体化方案。
+      这就像是我们的机器人能够听懂我们的话，理解我们的需求，然后做出最合适的动作。
+同时，我们的大模型感知及决策技术也是我们自己研发的！这意味着我们的机器人能够像人类一样感知世界，做出明智的决策。
+你想再深入了解哪部分，让【美拉】给你再好好介绍一下！ </voice>
+      <voice_en>We've built our own embodied intelligence software platform from scratch, which is like giving the robot a super smart brain, enabling it to achieve an integrated solution for voice interaction, decision-making planning, and motion control. 
+      It's like our robots can understand what we say, grasp our needs, and then make the most suitable moves.
+Our large-scale perception and decision-making technology is also developed by us! This means our robots can perceive the world like humans and make wise decisions.
+Which part would you like to delve deeper into? Let [Mera] give you a more detailed introduction!  </voice_en>
+      <!-- <skill>
+         <name>industrialrobot</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+
+</demo>
+
+

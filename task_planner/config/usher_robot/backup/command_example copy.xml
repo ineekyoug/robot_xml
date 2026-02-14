@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="example">
+      <voice> 欢迎来参观我们的未来机器人展示 </voice>
+      <voice_en> welcome to our exhibition for future robotics </voice_en>
+      <voice_skill>
+         <name>audio</name>
+         <param>test</param>
+      </voice_skill>
+      <skill>
+         <name>test</name>
+         <param>0</param>
+      </skill>
+
+      <wait>100</wait> 
+      <!-- wait time 100 ms -->
+
+      <navigation>
+         <name>turn</name>
+         <param>90</param>
+      </navigation>
+   </task>
+</demo>

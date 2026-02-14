@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<demo>  
+   <!-- skill name "sensor_data_collection" is fixed, using object and param to indicate the task and count-->
+   <task id="sensor_data_collection">
+      <skill>
+         <name>sensor_data_collection</name>
+         <type>0</type>
+         <object>noise_detect</object>
+         <param>10</param>
+      </skill>
+   </task>
+</demo>

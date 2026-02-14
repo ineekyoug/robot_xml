@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="robotintroduction">
+      <voice> 目前我们有两个机器人，分别是服务于工业场景的【美罗】以及服务于商业和家庭场景的【美拉】；想知道美拉和美罗的详细工作嘛，那我可要好好讲讲啦！ </voice>
+      <voice_en> Right now, we have two robots: Mero, who serves in industrial settings, and Mera, who serves in commercial and home settings. 
+If you want to know more about what Mera and Mero do, well, let me tell you all about it! </voice_en>            
+      <skill>
+         <name>robot_introduction</name>
+         <param> 0 </param>
+      </skill>
+   </task>
+
+</demo>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="robotadvantage">
+      <voice> 我们的机器人最大的优势就是全自研，从关节模组、机械臂、灵巧手、整机架构、传感器到具身Agent等大部分核心器件均为自研。
+我们的机器人能够通过多模态的感知识别环境状态来规划任务与学习技能，结合高精度多自由度仿生臂和灵巧手，能出色的替代人完成工厂零件组装和家庭服务陪伴。 </voice>
+      <voice_en> Our robots' biggest advantage is that they're fully self-developed. From the joint modules, machanical arms, dexterous hands, overall architecture, sensors, to embodied Agents, most of the core components are developed in-house.
+Our robots can perceive and recognize environmental conditions through multimodal sensing to plan tasks and learn skills. With high-precision bionic arms and dexterous hands, they can excellently replace humans in assembling factory parts and providing companionship for home services. </voice_en>
+      <!-- <skill>
+         <name>robotadvantage</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+
+</demo>
+
+

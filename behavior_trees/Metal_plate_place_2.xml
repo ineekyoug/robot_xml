@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                <ArmAction server_name="/arm"
+                           server_timeout="30000"
+                           action_name="reset"
+                           action_index="0"
+                           action_param="0"
+                           arm_index="1"
+                           goal_left="0;0;0;0;0;0;1"    
+                           waypoints_left=""
+                           goal_right="0;0;0;0;0;0;1"
+                           waypoints_right="115.729; -40.125; 74.397; 61.845; -73.282; -20.841; 24.999;
+                                            84.037; -27.500; 66.743; 23.014; -76.552; -24.553; 25.445"                   
+                           speed_percentage="35"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                           msg="{arm_msg}"
+                           pose="{arm_pose}"/>
+            </Sequence>
+    </BehaviorTree>
+</root>

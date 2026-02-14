@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4">
+  <BehaviorTree ID="Reset">
+    <Sequence>
+      <TorsoAction server_name="/Torso/torso_action_service"
+                   server_timeout="5000"
+                   torso_height="35"
+                   torso_yaw="35"
+                   head_pitch="0"
+                   head_yaw="0"
+                   max_velocity="0.15"
+                   work_mode="0"
+                   success="{torsor_success}"
+                   msg="{torsor_msg}"/>
+      <HandAction server_name="/avaia_hand"
+                  server_timeout="2000"
+                  action_name="reset_both"
+                  success="{hand_success}"
+                  status="{hand_status}"/>
+      <ArmAction server_name="/arm"
+                 server_timeout="30000"
+                 action_name="reset"
+                 action_index="0"
+                 action_param="0"
+                 arm_index="2"
+                 goal_left="0;0;0;0;0;0;1"
+                 waypoints_left="0;-30;-90;0;0;0;0;0;-5;0;0;0;0;0"
+                 goal_right="0;0;0;0;0;0;1"
+                 waypoints_right="0;-30;-90;0;0;0;0;0;-5;0;0;0;0;0"
+                 speed_percentage="30"
+                  disable_self_or_obstacle_avoidance_planning="true"
+                disable_self_or_obstacle_collision_detection="true"
+                 msg="{arm_msg}"
+                 pose="{arm_pose}"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

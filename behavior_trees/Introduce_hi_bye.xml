@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                  <ArmAction server_name="/arm"
+                            server_timeout="30000"
+                            action_name="move_to_metal_pick_standby"
+                            action_index="0"
+                            action_param="0"
+                            arm_index="1"
+                            goal_left="0;0;0;0;0;0;1"
+                            waypoints_left=""
+                            goal_right="0;0;0;0;0;0;1"
+                            waypoints_right="0; -15; 0; 0; 0; 0; 0;
+                                            16.4420; -21.1554; -42.7203; 40.1752; 112.1757; 0.6836; -7.2892;
+                                            44.3492; -61.9109; -122.7726; 111.9124; 112.1776; -1.3118; -7.5364                                            
+                                              "                   
+                            speed_percentage="60"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                            msg="{arm_msg}"
+                            pose="{arm_pose}"/>
+                <Parallel failure_count="1"
+                          success_count="2">      
+                  <ArmAction server_name="/arm"
+                              server_timeout="30000"
+                              action_name="move_to_metal_pick_standby"
+                              action_index="0"
+                              action_param="0"
+                              arm_index="1"
+                              goal_left="0;0;0;0;0;0;1"
+                              waypoints_left=""
+                              goal_right="0;0;0;0;0;0;1"
+                              waypoints_right="35.7773; -55.6132; -147.0759; 87.9396; 112.1740; -1.0262; -7.2130;
+                                              44.3492; -61.9109; -122.7726; 111.9124; 112.1776; -1.3118; -7.5364;
+                                              35.7773; -55.6132; -147.0759; 87.9396; 112.1740; -1.0262; -7.2130;
+                                              44.3492; -61.9109; -122.7726; 111.9124; 112.1776; -1.3118; -7.5364;
+                                              35.7773; -55.6132; -147.0759; 87.9396; 112.1740; -1.0262; -7.2130;
+                                              44.3492; -61.9109; -122.7726; 111.9124; 112.1776; -1.3118; -7.5364;
+                                              35.7773; -55.6132; -147.0759; 87.9396; 112.1740; -1.0262; -7.2130;
+                                              14.4512; -35.3549; -64.0639; 58.6157; 112.1757; -0.9767; -7.5420;
+                                              0;-20;0;0;0;0;0;
+                                              0;-1;0;0;0;0;0
+                                              "                   
+                              speed_percentage="40"
+                              force_thres_left=""
+                              ik_initial_joint_left=""
+                              force_thres_right=""
+                              ik_initial_joint_right=""
+                              disable_self_or_obstacle_avoidance_planning="true"
+                              enable_replan="false"
+                              disable_force_collision_detection="true"
+                              disable_self_or_obstacle_collision_detection="true"
+                              msg="{arm_msg}"
+                              pose="{arm_pose}"/>
+
+                  <!-- !!!!!!!!!!!!!VOICE!!!!!!!!!!!!!!!!!!!!! -->
+                  <SystemCallService command="aplay ~/MIRO2_2425_wav/07.WAV"/>
+                  <!-- say hi, 04-09: 04(general), 05(Yuanchuan), 06(ZhiGu), 07(Sight), 08(Angela)  -->
+                  <SleepAction msec="2500"/>
+                </Parallel>
+            </Sequence>
+    </BehaviorTree>
+</root>

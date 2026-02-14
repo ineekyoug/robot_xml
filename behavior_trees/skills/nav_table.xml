@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="NavTable">
+  <BehaviorTree ID="NavTable">
+    <Sequence>
+      <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="0.148314;0.89334;0.089"
+                 success="{success}"
+                 msg="{msg}"/>
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="水果放这里啦，请享用！"
+                    type="text"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+            <Sequence>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                            server_timeout="60000"
+                            torso_height="35.0"
+                            torso_yaw="35.0"
+                            head_pitch="0.0"
+                            head_yaw="2"
+                            max_velocity="0.15"
+                            work_mode="0"
+                            success="{success}"
+                            msg="{msg}"/>
+                <TorsoAction server_name="/Torso/torso_action_service"
+                            server_timeout="60000"
+                            torso_height="75.0"
+                            torso_yaw="10.0"
+                            head_pitch="-28.6"
+                            head_yaw="2"
+                            max_velocity="0.15"
+                            work_mode="0"
+                            success="{success}"
+                            msg="{msg}"/>
+                <TargetManipPoseService service_name="/target_manipulate_pose_estimation"
+                            server_timeout="50000"
+                            target_name="metal"
+                            perception_type="0"
+                            arm_index = "1"
+                            camera_id="0"
+                            est_pose="{est_pose}"
+                            est_pose_pre="{est_pose_pre}"
+                            delta_pose="{delta_pose}"
+                            feedback="{manip_feedback}"/>
+
+                <PoseMulService left_pose="-0.04;0.02;0.0;0;0;0;1"
+                      right_pose="{est_pose_pre}"
+                      result_pose="{est_pose_pre}"/>
+                <PoseMulService left_pose="-0.04;0.02;0.0;0;0;0;1"
+                      right_pose="{est_pose}"
+                      result_pose="{est_pose}"/>
+
+               <Parallel failure_count="1"
+                          success_count="3">
+                  <HandAction server_name="/avaia_hand"
+                             server_timeout="2000"
+                             action_name="prepare_right"
+                             success="{hand_success}"
+                             status="{hand_status}"/>
+                  <TorsoAction server_name="/Torso/torso_action_service"
+                              server_timeout="60000"
+                              torso_height="93.0"
+                              torso_yaw="32.0"
+                              head_pitch="-28.6"
+                              head_yaw="2"
+                              max_velocity="0.15"
+                              work_mode="0"
+                              success="{success}"
+                              msg="{msg}"/>
+                  <ArmAction server_name="/arm"
+                            server_timeout="30000"
+                            action_name="move_to_metal_pick_standby"
+                            action_index="0"
+                            action_param="0"
+                            arm_index="1"
+                            goal_left="0;0;0;0;0;0;1"
+                            waypoints_left=""
+                            goal_right="0;0;0;0;0;0;1"
+                            waypoints_right="-1.2404; -8.0484; -4.7730; 2.8868; 9.5097; 17.1010; -19.2435;
+                                              36.2404; -98.0484; 1.275; 80.749; 9.5097; 17.1010; -19.2435
+                                              "                   
+                            speed_percentage="35"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                            msg="{arm_msg}"
+                            pose="{arm_pose}"/>
+               </Parallel>
+
+               
+               <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="{est_pose_pre}"
+                              source_frame="base_link"
+                              target_frame="torso_up_link"
+                              target_pose="{est_pose_pre_up}"
+                              feedback="{tf_trans_feedback}"/>
+               <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="{est_pose}"
+                              source_frame="base_link"
+                              target_frame="torso_up_link"
+                              target_pose="{est_pose_up}"
+                              feedback="{tf_trans_feedback}"/>
+
+               <ArmAction server_name="/arm"
+                            server_timeout="30000"
+                            action_name="move_to_metal_pick_pre"
+                            action_index="1"
+                            action_param="0"
+                            arm_index="1"
+                            goal_left="0;0;0;0;0;0;1"
+                            waypoints_left=""
+                            goal_right="{est_pose_pre_up}"
+                            waypoints_right="76.744; -99.676; 1.275; 80.749; -20.904; -2.792; 15.906;
+                                             76.459; -90.863; 1.730; 84.286; -20.231; -2.568; 2.254"                  
+                            speed_percentage="35"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right="80.693; -83.682; 1.832; 96.682; -21.847; -42.270; -29.731"
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                            msg="{arm_msg}"
+                            pose="{arm_pose}"/>
+                
+                
+                <ArmAction server_name="/arm"
+                          server_timeout="30000"
+                          action_name="move_to_metal_pick"
+                          action_index="1"
+                          action_param="0"
+                          arm_index="1"
+                          goal_left="0;0;0;0;0;0;1"
+                          waypoints_left=""
+                          goal_right="{est_pose_up}"
+                          waypoints_right=""
+                          speed_percentage="15"
+                          force_thres_left=""
+                          ik_initial_joint_left=""
+                          force_thres_right=""
+                          ik_initial_joint_right="77.174; -46.154; 3.847; 44.890; -20.486; -30.071; -17.973"
+                          disable_self_or_obstacle_avoidance_planning="true"
+                          enable_replan="false"
+                          disable_force_collision_detection="true"
+                          disable_self_or_obstacle_collision_detection="true"
+                          msg="{arm_msg}"
+                          pose="{arm_pose}"/>
+
+                <HandAction server_name="/avaia_hand"
+                            server_timeout="2000"
+                            action_name="grasp_metal_right"
+                            success="{hand_success}"
+                            status="{hand_status}"/>
+
+
+
+                <ArmAction server_name="/arm"
+                          server_timeout="30000"
+                          action_name="reset"
+                          action_index="1"
+                          action_param="0"
+                          arm_index="1"
+                          goal_left="0;0;0;0;0;0;1"
+                          waypoints_left=""
+                          goal_right="{est_pose_pre_up}"
+                          waypoints_right=""                   
+                          speed_percentage="15"
+                          force_thres_left=""
+                          ik_initial_joint_left=""
+                          force_thres_right=""
+                          ik_initial_joint_right=""
+                          disable_self_or_obstacle_avoidance_planning="true"
+                          enable_replan="false"
+                          disable_force_collision_detection="true"
+                          disable_self_or_obstacle_collision_detection="true"
+                          msg="{arm_msg}"
+                          pose="{arm_pose}"/>
+                
+                <Parallel failure_count="1"
+                          success_count="2">
+                  <TorsoAction server_name="/Torso/torso_action_service"
+                              server_timeout="60000"
+                              torso_height="0"
+                              torso_yaw="-5.0"
+                              head_pitch="0"
+                              head_yaw="2"
+                              max_velocity="0.15"
+                              work_mode="0"
+                              success="{success}"
+                              msg="{msg}"/>
+                  <ArmAction server_name="/arm"
+                            server_timeout="30000"
+                            action_name="reset"
+                            action_index="0"
+                            action_param="0"
+                            arm_index="1"
+                            goal_left="0;0;0;0;0;0;1"
+                            waypoints_left=""
+                            goal_right="0;0;0;0;0;0;1"
+                            waypoints_right="66.744; -99.676; 1.275; 80.749; -20.904; -2.792; 15.906;
+                                             6.238; -32.919; 3.714; 9.280; -12.106; -0.020; -15.712;
+                                             5;-10;0;0;0;0;0;0"                   
+                            speed_percentage="8"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                            msg="{arm_msg}"
+                            pose="{arm_pose}"/>
+                </Parallel>
+
+                <ArmAction server_name="/arm"
+                            server_timeout="30000"
+                            action_name="reset"
+                            action_index="0"
+                            action_param="0"
+                            arm_index="1"
+                            goal_left="0;0;0;0;0;0;1"
+                            waypoints_left=""
+                            goal_right="0;0;0;0;0;0;1"
+                            waypoints_right="1.641; -29.433; 4.162; 12.198; -76.776; -9.432; 2.586"                   
+                            speed_percentage="15"
+                            force_thres_left=""
+                            ik_initial_joint_left=""
+                            force_thres_right=""
+                            ik_initial_joint_right=""
+                            disable_self_or_obstacle_avoidance_planning="true"
+                            enable_replan="false"
+                            disable_force_collision_detection="true"
+                            disable_self_or_obstacle_collision_detection="true"
+                            msg="{arm_msg}"
+                            pose="{arm_pose}"/>
+            </Sequence>
+    </BehaviorTree>
+</root>

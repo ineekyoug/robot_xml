@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="projectintroduction">
+      <voice>  我们的项目，是通过核心零部件及智能体技术的全自研，为大家生产出极致成本的人形机器人，工程师亲手创造的美拉和美罗不仅性价比满满，还很聪明呢！</voice>
+      <voice_en> Our project is all about developing our own core components and AI agent to produce humanoid robots at the ultimate cost. 
+                  The Meras and Meros, created by our engineers with their own hands, are not only cost-effective but also very smart!
+      </voice_en>
+      <!-- <skill>
+         <name>introduction</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+</demo>

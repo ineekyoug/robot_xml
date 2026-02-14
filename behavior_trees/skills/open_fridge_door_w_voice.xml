@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="OpenFridgeDoor">
+  <BehaviorTree ID="OpenFridgeDoor">
+    <Sequence>
+      <!-- <NavAction server_name="/base_navigate"
+                 server_timeout="60000"
+                 action_name="navigation"
+                 type="0"
+                 target_pose="-3.0;-2.35;-3.14159"
+                 success="{nav_success}"
+                 msg="{nav_msg}"/> -->
+      <!--等待3秒-->
+      <SleepAction msec="3000"/>
+      <Fallback>
+        <ManipVisonService service_name="/manip_vision_service"
+                            server_timeout="5000"
+                            object_name="fridge_middle_bar"
+                            action_param="0"
+                            camera_id="0"
+                            est_pose="{est_pose}"
+                            feedback="{manip_feedback}"/>
+        <RetryUntilSuccessful num_attempts="5">
+          <Sequence>
+            <NavAction server_name="/base_navigate"
+                  server_timeout="60000"
+                  action_name="turn"
+                  type="0"
+                  target_pose="0;0;0.174"
+                  success="{success}"
+                  msg="{msg}"/>
+            <ManipVisonService service_name="/manip_vision_service"
+                                server_timeout="5000"
+                                object_name="fridge_middle_bar"
+                                action_param="0"
+                                camera_id="0"
+                                est_pose="{est_pose}"
+                                feedback="{manip_feedback}"/>
+          </Sequence>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <NavAction server_name="/base_navigate"
+                server_timeout="60000"
+                action_name="turn"
+                type="0"
+                target_pose="0;0;-0.87"
+                success="{success}"
+                msg="{msg}"/>
+          <RetryUntilSuccessful num_attempts="5">
+            <Sequence>
+              <NavAction server_name="/base_navigate"
+                    server_timeout="60000"
+                    action_name="turn"
+                    type="0"
+                    target_pose="0;0;-0.174"
+                    success="{success}"
+                    msg="{msg}"/>
+              <ManipVisonService service_name="/manip_vision_service"
+                                  server_timeout="5000"
+                                  object_name="fridge_middle_bar"
+                                  action_param="0"
+                                  camera_id="0"
+                                  est_pose="{est_pose}"
+                                  feedback="{manip_feedback}"/>
+            </Sequence>
+          </RetryUntilSuccessful> 
+        </Sequence>
+      </Fallback>
+      <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="{est_pose}"
+                              source_frame="camera_torso_link"
+                              target_frame="torso_up_link"
+                              target_pose="{est_pose_up}"
+                              feedback="{tf_trans_feedback}"/> 
+      <TfTransformPoseService service_name="/transform_pose"
+                              server_timeout="5000"
+                              source_pose="-0.02164536900818348;-0.04340590909123421;0.4519999921321869;0.2524988812747761;0.00514829171403733;0.001343490422124425;0.9675825572429979"
+                              source_frame="camera_torso_link"
+                              target_frame="torso_up_link"
+                              target_pose="{desired_pose}"
+                              feedback="{tf_trans_feedback}"/>
+      <ChassisAdjustAction server_name="/base_navigate"
+                          server_timeout="60000"
+                          target_pose="{est_pose_up}"
+                          desired_pose="{desired_pose}"
+                          th_move="0.1" /> 
+      <SpeakService service_name="/speak"
+                    server_timeout="5000"
+                    speech_text="打开冰箱门"
+                    type="text"/>
+      <SleepAction msec="6000"/>
+      <TorsoAction server_name="/Torso/torso_action_service"
+                   server_timeout="60000"
+                   torso_height="0.25"
+                   torso_yaw="0"
+                   head_pitch="0"
+                   head_yaw="0"
+                   max_velocity="0.15"
+                   work_mode="0"
+                   success="{success}"
+                   msg="{msg}"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

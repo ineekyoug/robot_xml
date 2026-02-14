@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<demo>
+   <task id="meilaparameter">
+      <voice> 美拉包括32个主动和10个被动自由度，他的最大行走速度可以达到0.8米每秒，单臂负载为3千克，最大臂展为650毫米，续航能达到两小时以上，身高是135至160厘米，重量约为76.5千克 </voice>
+      <voice_en>  </voice_en>
+      <!-- <skill>
+         <name>meilaparameter</name>
+         <param> 0 </param>
+      </skill> -->
+   </task>
+
+</demo>
+
+
